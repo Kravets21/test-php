@@ -82,8 +82,8 @@ class AudienceUserSegment implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'created_at' => false
+        'name' => false,
+        'created_at' => false
     ];
 
     /**

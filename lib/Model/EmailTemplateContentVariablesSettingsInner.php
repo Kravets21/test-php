@@ -82,8 +82,8 @@ class EmailTemplateContentVariablesSettingsInner implements ModelInterface, Arra
       */
     protected static array $openAPINullables = [
         'path' => false,
-		'default_value' => false,
-		'recipient_property' => false
+        'default_value' => false,
+        'recipient_property' => false
     ];
 
     /**

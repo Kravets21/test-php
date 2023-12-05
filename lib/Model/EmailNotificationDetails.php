@@ -100,17 +100,17 @@ class EmailNotificationDetails implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'locale' => false,
-		'recipient_id' => false,
-		'to_name' => false,
-		'to_email_address' => false,
-		'from_name' => false,
-		'from_email_address' => false,
-		'status' => false,
-		'custom_params' => false,
-		'created_at' => false,
-		'opens' => false,
-		'clicks' => false
+        'locale' => false,
+        'recipient_id' => false,
+        'to_name' => false,
+        'to_email_address' => false,
+        'from_name' => false,
+        'from_email_address' => false,
+        'status' => false,
+        'custom_params' => false,
+        'created_at' => false,
+        'opens' => false,
+        'clicks' => false
     ];
 
     /**

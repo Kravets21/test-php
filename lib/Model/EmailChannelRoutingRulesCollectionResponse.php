@@ -82,8 +82,8 @@ class EmailChannelRoutingRulesCollectionResponse implements ModelInterface, Arra
       */
     protected static array $openAPINullables = [
         'links' => false,
-		'meta' => false,
-		'data' => false
+        'meta' => false,
+        'data' => false
     ];
 
     /**

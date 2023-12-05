@@ -82,8 +82,8 @@ class EmailTemplateCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'channel_id' => false,
-		'name' => false,
-		'description' => false
+        'name' => false,
+        'description' => false
     ];
 
     /**

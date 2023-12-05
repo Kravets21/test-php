@@ -82,8 +82,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'sms' => false,
-		'email' => false,
-		'push' => false
+        'email' => false,
+        'push' => false
     ];
 
     /**

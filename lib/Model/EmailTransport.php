@@ -88,11 +88,11 @@ class EmailTransport implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'type' => false,
-		'headers' => false,
-		'status' => false,
-		'created_at' => false
+        'name' => false,
+        'type' => false,
+        'headers' => false,
+        'status' => false,
+        'created_at' => false
     ];
 
     /**

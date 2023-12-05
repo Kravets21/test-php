@@ -84,9 +84,9 @@ class EmailSendRequestTo implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'email_address' => false,
-		'external_id' => false,
-		'recipient_id' => false
+        'email_address' => false,
+        'external_id' => false,
+        'recipient_id' => false
     ];
 
     /**

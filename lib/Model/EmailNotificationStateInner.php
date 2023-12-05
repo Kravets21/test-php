@@ -84,9 +84,9 @@ class EmailNotificationStateInner implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'status' => false,
-		'reason' => false,
-		'data' => false,
-		'time' => false
+        'reason' => false,
+        'data' => false,
+        'time' => false
     ];
 
     /**

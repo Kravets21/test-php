@@ -84,9 +84,9 @@ class SmsTemplateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'channel_id' => false,
-		'name' => false,
-		'description' => false,
-		'status' => false
+        'name' => false,
+        'description' => false,
+        'status' => false
     ];
 
     /**

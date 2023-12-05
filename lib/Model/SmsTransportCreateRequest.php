@@ -84,9 +84,9 @@ class SmsTransportCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'type' => false,
-		'credentials' => false,
-		'status' => false
+        'type' => false,
+        'credentials' => false,
+        'status' => false
     ];
 
     /**

@@ -82,8 +82,8 @@ class EmailSendRequestAttachmentsInner implements ModelInterface, ArrayAccess, \
       */
     protected static array $openAPINullables = [
         'content_type' => false,
-		'file_name' => false,
-		'content_base64' => false
+        'file_name' => false,
+        'content_base64' => false
     ];
 
     /**

@@ -88,11 +88,11 @@ class EmailChannelRoutingRules implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'transport_id' => false,
-		'sender_id' => false,
-		'is_reserved' => false,
-		'status' => false,
-		'created_at' => false
+        'transport_id' => false,
+        'sender_id' => false,
+        'is_reserved' => false,
+        'status' => false,
+        'created_at' => false
     ];
 
     /**

@@ -80,7 +80,7 @@ class EmailTemplateContentVariablesSettingsInnerRecipientProperty implements Mod
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'key' => true
+        'key' => true
     ];
 
     /**

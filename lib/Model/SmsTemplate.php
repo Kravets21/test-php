@@ -90,12 +90,12 @@ class SmsTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'channel_id' => false,
-		'name' => false,
-		'description' => false,
-		'locales' => false,
-		'status' => false,
-		'created_at' => false
+        'channel_id' => false,
+        'name' => false,
+        'description' => false,
+        'locales' => false,
+        'status' => false,
+        'created_at' => false
     ];
 
     /**

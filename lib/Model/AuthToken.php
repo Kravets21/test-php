@@ -82,8 +82,8 @@ class AuthToken implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'access_token' => false,
-		'expires_in' => false,
-		'token_type' => false
+        'expires_in' => false,
+        'token_type' => false
     ];
 
     /**

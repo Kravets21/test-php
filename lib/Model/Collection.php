@@ -80,7 +80,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'links' => false,
-		'meta' => false
+        'meta' => false
     ];
 
     /**

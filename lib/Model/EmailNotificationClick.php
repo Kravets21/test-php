@@ -86,10 +86,10 @@ class EmailNotificationClick implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'ip' => false,
-		'user_agent' => false,
-		'url' => false,
-		'time' => false
+        'ip' => false,
+        'user_agent' => false,
+        'url' => false,
+        'time' => false
     ];
 
     /**

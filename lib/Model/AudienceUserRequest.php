@@ -92,13 +92,13 @@ class AudienceUserRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'external_id' => true,
-		'timezone' => true,
-		'language' => false,
-		'email_address' => true,
-		'phone_number' => true,
-		'push_android_token' => true,
-		'push_ios_token' => true,
-		'push_web_token' => true
+        'timezone' => true,
+        'language' => false,
+        'email_address' => true,
+        'phone_number' => true,
+        'push_android_token' => true,
+        'push_ios_token' => true,
+        'push_web_token' => true
     ];
 
     /**

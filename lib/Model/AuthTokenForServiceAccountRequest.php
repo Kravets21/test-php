@@ -80,7 +80,7 @@ class AuthTokenForServiceAccountRequest implements ModelInterface, ArrayAccess, 
       */
     protected static array $openAPINullables = [
         'client_id' => false,
-		'client_secret' => false
+        'client_secret' => false
     ];
 
     /**

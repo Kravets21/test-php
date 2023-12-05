@@ -86,10 +86,10 @@ class PushTemplateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'badge' => false,
-		'priority' => false,
-		'channel_id' => false,
-		'ttl' => false
+        'badge' => false,
+        'priority' => false,
+        'channel_id' => false,
+        'ttl' => false
     ];
 
     /**

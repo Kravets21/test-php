@@ -82,8 +82,8 @@ class SmsNotificationSendRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'template' => false,
-		'to' => false,
-		'custom_params' => true
+        'to' => false,
+        'custom_params' => true
     ];
 
     /**

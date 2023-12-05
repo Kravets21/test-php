@@ -85,9 +85,9 @@ class CollectionMeta implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'path' => false,
-		'per_page' => false,
-		'next_cursor' => true,
-		'prev_cursor' => true
+        'per_page' => false,
+        'next_cursor' => true,
+        'prev_cursor' => true
     ];
 
     /**

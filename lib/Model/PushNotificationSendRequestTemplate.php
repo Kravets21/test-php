@@ -86,10 +86,10 @@ class PushNotificationSendRequestTemplate implements ModelInterface, ArrayAccess
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'locale' => false,
-		'variables' => false,
-		'data' => false
+        'name' => false,
+        'locale' => false,
+        'variables' => false,
+        'data' => false
     ];
 
     /**

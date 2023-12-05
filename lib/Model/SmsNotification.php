@@ -96,15 +96,15 @@ class SmsNotification implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'locale' => false,
-		'price' => false,
-		'sender_id' => false,
-		'recipient_id' => false,
-		'message_sid' => false,
-		'to_number' => false,
-		'status' => false,
-		'custom_params' => false,
-		'created_at' => false
+        'locale' => false,
+        'price' => false,
+        'sender_id' => false,
+        'recipient_id' => false,
+        'message_sid' => false,
+        'to_number' => false,
+        'status' => false,
+        'custom_params' => false,
+        'created_at' => false
     ];
 
     /**

@@ -80,7 +80,7 @@ class PushPlatformRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'credentials' => false
+        'credentials' => false
     ];
 
     /**

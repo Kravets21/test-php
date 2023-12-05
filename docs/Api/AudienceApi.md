@@ -384,7 +384,7 @@ deleteAudienceSegment($audience_segment_id)
 
 Delete a Segment
 
-To delete a segment from your audience.
+To delete a segment from your audience !.
 
 ### Example
 

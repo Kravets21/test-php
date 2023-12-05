@@ -86,10 +86,10 @@ class EmailSender implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'email_address' => false,
-		'restrict_customization' => false,
-		'created_at' => false
+        'name' => false,
+        'email_address' => false,
+        'restrict_customization' => false,
+        'created_at' => false
     ];
 
     /**

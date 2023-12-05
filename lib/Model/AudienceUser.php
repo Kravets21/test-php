@@ -100,17 +100,17 @@ class AudienceUser implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'external_id' => true,
-		'timezone' => true,
-		'language' => false,
-		'last_activity_at' => true,
-		'last_activity_type' => true,
-		'last_activity_event' => true,
-		'data' => false,
-		'contacts' => false,
-		'tags' => false,
-		'created_at' => false,
-		'updated_at' => false
+        'external_id' => true,
+        'timezone' => true,
+        'language' => false,
+        'last_activity_at' => true,
+        'last_activity_type' => true,
+        'last_activity_event' => true,
+        'data' => false,
+        'contacts' => false,
+        'tags' => false,
+        'created_at' => false,
+        'updated_at' => false
     ];
 
     /**

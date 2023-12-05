@@ -82,8 +82,8 @@ class SmsChannel implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'created_at' => false
+        'name' => false,
+        'created_at' => false
     ];
 
     /**

@@ -80,7 +80,7 @@ class AudienceUserContact implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'type' => false,
-		'address' => true
+        'address' => true
     ];
 
     /**

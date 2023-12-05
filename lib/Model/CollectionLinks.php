@@ -85,9 +85,9 @@ class CollectionLinks implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'first' => true,
-		'last' => true,
-		'prev' => true,
-		'next' => true
+        'last' => true,
+        'prev' => true,
+        'next' => true
     ];
 
     /**

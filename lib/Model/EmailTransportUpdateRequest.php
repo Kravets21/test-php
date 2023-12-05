@@ -84,9 +84,9 @@ class EmailTransportUpdateRequest implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'name' => true,
-		'status' => true,
-		'credentials' => true,
-		'headers' => true
+        'status' => true,
+        'credentials' => true,
+        'headers' => true
     ];
 
     /**

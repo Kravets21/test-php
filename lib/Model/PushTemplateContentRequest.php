@@ -88,11 +88,11 @@ class PushTemplateContentRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'title' => false,
-		'body' => false,
-		'icon' => true,
-		'image' => true,
-		'link' => true,
-		'data' => false
+        'body' => false,
+        'icon' => true,
+        'image' => true,
+        'link' => true,
+        'data' => false
     ];
 
     /**

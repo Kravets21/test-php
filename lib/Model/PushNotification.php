@@ -94,14 +94,14 @@ class PushNotification implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'locale' => false,
-		'token' => false,
-		'recipient_id' => false,
-		'status' => false,
-		'custom_params' => false,
-		'delivered_at' => false,
-		'opened_at' => false,
-		'created_at' => false
+        'locale' => false,
+        'token' => false,
+        'recipient_id' => false,
+        'status' => false,
+        'custom_params' => false,
+        'delivered_at' => false,
+        'opened_at' => false,
+        'created_at' => false
     ];
 
     /**

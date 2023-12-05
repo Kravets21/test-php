@@ -80,7 +80,7 @@ class EmailSendRequestFrom implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'email_address' => false
+        'email_address' => false
     ];
 
     /**

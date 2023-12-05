@@ -82,8 +82,8 @@ class EmailRoutingRuleCreateRequest implements ModelInterface, ArrayAccess, \Jso
       */
     protected static array $openAPINullables = [
         'transport_id' => false,
-		'sender_id' => false,
-		'is_reserved' => false
+        'sender_id' => false,
+        'is_reserved' => false
     ];
 
     /**
