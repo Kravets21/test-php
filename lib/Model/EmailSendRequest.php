@@ -86,10 +86,10 @@ class EmailSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'template' => false,
-		'to' => false,
-		'from' => false,
-		'attachments' => false,
-		'custom_params' => true
+        'to' => false,
+        'from' => false,
+        'attachments' => false,
+        'custom_params' => true
     ];
 
     /**

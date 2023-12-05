@@ -82,8 +82,8 @@ class EmailSenderCollectionResponse implements ModelInterface, ArrayAccess, \Jso
       */
     protected static array $openAPINullables = [
         'links' => false,
-		'meta' => false,
-		'data' => false
+        'meta' => false,
+        'data' => false
     ];
 
     /**

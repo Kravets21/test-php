@@ -86,10 +86,10 @@ class EmailTemplateContentUpdateRequest implements ModelInterface, ArrayAccess, 
       */
     protected static array $openAPINullables = [
         'subject' => true,
-		'text_html' => true,
-		'text_plain' => true,
-		'text_amp' => true,
-		'builder_html' => true
+        'text_html' => true,
+        'text_plain' => true,
+        'text_amp' => true,
+        'builder_html' => true
     ];
 
     /**

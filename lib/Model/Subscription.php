@@ -90,12 +90,12 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'description' => false,
-		'events' => false,
-		'metadata' => false,
-		'status' => false,
-		'url' => false,
-		'created_at' => false
+        'description' => false,
+        'events' => false,
+        'metadata' => false,
+        'status' => false,
+        'url' => false,
+        'created_at' => false
     ];
 
     /**

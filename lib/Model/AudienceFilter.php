@@ -82,8 +82,8 @@ class AudienceFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'rules' => false,
-		'created_at' => false
+        'rules' => false,
+        'created_at' => false
     ];
 
     /**

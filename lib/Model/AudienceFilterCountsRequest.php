@@ -80,7 +80,7 @@ class AudienceFilterCountsRequest implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'filter_id' => true,
-		'rules' => false
+        'rules' => false
     ];
 
     /**

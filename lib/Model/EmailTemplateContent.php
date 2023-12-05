@@ -92,13 +92,13 @@ class EmailTemplateContent implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'locale' => false,
-		'subject' => false,
-		'text_plain' => false,
-		'text_html' => false,
-		'text_amp' => false,
-		'builder_html' => false,
-		'variables_settings' => false,
-		'created_at' => false
+        'subject' => false,
+        'text_plain' => false,
+        'text_html' => false,
+        'text_amp' => false,
+        'builder_html' => false,
+        'variables_settings' => false,
+        'created_at' => false
     ];
 
     /**

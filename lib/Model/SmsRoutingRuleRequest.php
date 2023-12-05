@@ -90,12 +90,12 @@ class SmsRoutingRuleRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'sender_id' => false,
-		'country_code' => false,
-		'excluded_countries' => false,
-		'is_reserved' => false,
-		'alpha_number' => false,
-		'priority' => false,
-		'status' => false
+        'country_code' => false,
+        'excluded_countries' => false,
+        'is_reserved' => false,
+        'alpha_number' => false,
+        'priority' => false,
+        'status' => false
     ];
 
     /**

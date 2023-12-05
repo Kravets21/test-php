@@ -84,9 +84,9 @@ class EmailSendRequestTemplate implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'name' => false,
-		'locale' => false,
-		'variables' => false
+        'name' => false,
+        'locale' => false,
+        'variables' => false
     ];
 
     /**

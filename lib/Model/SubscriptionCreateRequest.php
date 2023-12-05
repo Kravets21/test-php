@@ -86,10 +86,10 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static array $openAPINullables = [
         'description' => false,
-		'events' => false,
-		'metadata' => false,
-		'status' => false,
-		'url' => false
+        'events' => false,
+        'metadata' => false,
+        'status' => false,
+        'url' => false
     ];
 
     /**

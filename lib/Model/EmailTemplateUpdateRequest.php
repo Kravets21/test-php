@@ -82,8 +82,8 @@ class EmailTemplateUpdateRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'channel_id' => true,
-		'name' => true,
-		'description' => true
+        'name' => true,
+        'description' => true
     ];
 
     /**

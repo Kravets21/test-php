@@ -82,8 +82,8 @@ class PushNotificationSendRequest implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'template' => false,
-		'to' => false,
-		'custom_params' => true
+        'to' => false,
+        'custom_params' => true
     ];
 
     /**

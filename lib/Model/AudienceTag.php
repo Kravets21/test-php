@@ -80,7 +80,7 @@ class AudienceTag implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'created_at' => false
+        'created_at' => false
     ];
 
     /**

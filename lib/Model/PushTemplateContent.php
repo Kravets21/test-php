@@ -94,14 +94,14 @@ class PushTemplateContent implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'locale' => false,
-		'title' => false,
-		'body' => false,
-		'icon' => true,
-		'image' => true,
-		'link' => true,
-		'variables_settings' => false,
-		'data' => false,
-		'created_at' => false
+        'title' => false,
+        'body' => false,
+        'icon' => true,
+        'image' => true,
+        'link' => true,
+        'variables_settings' => false,
+        'data' => false,
+        'created_at' => false
     ];
 
     /**

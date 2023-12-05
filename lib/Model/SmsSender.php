@@ -88,11 +88,11 @@ class SmsSender implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'transport_id' => false,
-		'name' => false,
-		'phone_number' => false,
-		'status' => false,
-		'created_at' => false
+        'transport_id' => false,
+        'name' => false,
+        'phone_number' => false,
+        'status' => false,
+        'created_at' => false
     ];
 
     /**

@@ -80,7 +80,7 @@ class ErrorMultiple implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'message' => false,
-		'errors' => false
+        'errors' => false
     ];
 
     /**

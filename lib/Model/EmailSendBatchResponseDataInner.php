@@ -82,8 +82,8 @@ class EmailSendBatchResponseDataInner implements ModelInterface, ArrayAccess, \J
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'message' => false,
-		'errors' => false
+        'message' => false,
+        'errors' => false
     ];
 
     /**

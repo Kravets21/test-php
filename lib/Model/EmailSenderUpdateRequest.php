@@ -82,8 +82,8 @@ class EmailSenderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'name' => true,
-		'email_address' => true,
-		'restrict_customization' => false
+        'email_address' => true,
+        'restrict_customization' => false
     ];
 
     /**

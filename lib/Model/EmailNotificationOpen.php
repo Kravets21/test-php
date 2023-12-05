@@ -84,9 +84,9 @@ class EmailNotificationOpen implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
-		'ip' => false,
-		'user_agent' => false,
-		'time' => false
+        'ip' => false,
+        'user_agent' => false,
+        'time' => false
     ];
 
     /**

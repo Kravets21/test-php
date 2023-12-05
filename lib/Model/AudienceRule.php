@@ -82,8 +82,8 @@ class AudienceRule implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'property' => false,
-		'operator' => false,
-		'value' => false
+        'operator' => false,
+        'value' => false
     ];
 
     /**

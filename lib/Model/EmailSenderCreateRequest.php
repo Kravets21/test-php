@@ -82,8 +82,8 @@ class EmailSenderCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'email_address' => false,
-		'restrict_customization' => false
+        'email_address' => false,
+        'restrict_customization' => false
     ];
 
     /**

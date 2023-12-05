@@ -84,9 +84,9 @@ class PushNotificationSendRequestTo implements ModelInterface, ArrayAccess, \Jso
       */
     protected static array $openAPINullables = [
         'external_id' => false,
-		'recipient_id' => false,
-		'token' => false,
-		'platform' => false
+        'recipient_id' => false,
+        'token' => false,
+        'platform' => false
     ];
 
     /**
