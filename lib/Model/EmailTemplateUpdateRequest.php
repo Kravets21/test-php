@@ -316,7 +316,7 @@ class EmailTemplateUpdateRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets channel_id
      *
-     * @param string|null $channel_id The unique identifier of the Channel.
+     * @param string|null $channel_id The unique identifier of the Channels.
      *
      * @return self
      */
