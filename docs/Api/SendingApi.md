@@ -1,6 +1,6 @@
-# OpenAPI\Client\SendingApi
+# AirEml\SendingApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `sendEmail()`
 
 ```php
-sendEmail($email_send_request): \OpenAPI\Client\Model\EmailSendResponse
+sendEmail($email_send_request): \AirEml\Model\EmailSendResponse
 ```
 
 Send Email
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendingApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_send_request = new \OpenAPI\Client\Model\EmailSendRequest(); // \OpenAPI\Client\Model\EmailSendRequest
+$email_send_request = new \AirEml\Model\EmailSendRequest(); // \AirEml\Model\EmailSendRequest
 
 try {
     $result = $apiInstance->sendEmail($email_send_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_send_request** | [**\OpenAPI\Client\Model\EmailSendRequest**](../Model/EmailSendRequest.md)|  | [optional] |
+| **email_send_request** | [**\AirEml\Model\EmailSendRequest**](../Model/EmailSendRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSendResponse**](../Model/EmailSendResponse.md)
+[**\AirEml\Model\EmailSendResponse**](../Model/EmailSendResponse.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `sendEmailBatch()`
 
 ```php
-sendEmailBatch($email_send_batch_request): \OpenAPI\Client\Model\EmailSendBatchResponse
+sendEmailBatch($email_send_batch_request): \AirEml\Model\EmailSendBatchResponse
 ```
 
 Send Email Batch
@@ -85,12 +85,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendingApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_send_batch_request = new \OpenAPI\Client\Model\EmailSendBatchRequest(); // \OpenAPI\Client\Model\EmailSendBatchRequest
+$email_send_batch_request = new \AirEml\Model\EmailSendBatchRequest(); // \AirEml\Model\EmailSendBatchRequest
 
 try {
     $result = $apiInstance->sendEmailBatch($email_send_batch_request);
@@ -104,11 +104,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_send_batch_request** | [**\OpenAPI\Client\Model\EmailSendBatchRequest**](../Model/EmailSendBatchRequest.md)|  | [optional] |
+| **email_send_batch_request** | [**\AirEml\Model\EmailSendBatchRequest**](../Model/EmailSendBatchRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSendBatchResponse**](../Model/EmailSendBatchResponse.md)
+[**\AirEml\Model\EmailSendBatchResponse**](../Model/EmailSendBatchResponse.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `sendPush()`
 
 ```php
-sendPush($push_notification_send_request): \OpenAPI\Client\Model\PushNotificationSentResponse
+sendPush($push_notification_send_request): \AirEml\Model\PushNotificationSentResponse
 ```
 
 Send Push Notification
@@ -141,12 +141,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendingApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$push_notification_send_request = new \OpenAPI\Client\Model\PushNotificationSendRequest(); // \OpenAPI\Client\Model\PushNotificationSendRequest
+$push_notification_send_request = new \AirEml\Model\PushNotificationSendRequest(); // \AirEml\Model\PushNotificationSendRequest
 
 try {
     $result = $apiInstance->sendPush($push_notification_send_request);
@@ -160,11 +160,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **push_notification_send_request** | [**\OpenAPI\Client\Model\PushNotificationSendRequest**](../Model/PushNotificationSendRequest.md)|  | [optional] |
+| **push_notification_send_request** | [**\AirEml\Model\PushNotificationSendRequest**](../Model/PushNotificationSendRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushNotificationSentResponse**](../Model/PushNotificationSentResponse.md)
+[**\AirEml\Model\PushNotificationSentResponse**](../Model/PushNotificationSentResponse.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ No authorization required
 ## `sendSmsBatchNotification()`
 
 ```php
-sendSmsBatchNotification($sms_notification_send_multiple_request): \OpenAPI\Client\Model\SmsMultipleNotificationSentResponse
+sendSmsBatchNotification($sms_notification_send_multiple_request): \AirEml\Model\SmsMultipleNotificationSentResponse
 ```
 
 Send SMS Batch Notification
@@ -197,12 +197,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendingApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$sms_notification_send_multiple_request = new \OpenAPI\Client\Model\SmsNotificationSendMultipleRequest(); // \OpenAPI\Client\Model\SmsNotificationSendMultipleRequest
+$sms_notification_send_multiple_request = new \AirEml\Model\SmsNotificationSendMultipleRequest(); // \AirEml\Model\SmsNotificationSendMultipleRequest
 
 try {
     $result = $apiInstance->sendSmsBatchNotification($sms_notification_send_multiple_request);
@@ -216,11 +216,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_notification_send_multiple_request** | [**\OpenAPI\Client\Model\SmsNotificationSendMultipleRequest**](../Model/SmsNotificationSendMultipleRequest.md)|  | |
+| **sms_notification_send_multiple_request** | [**\AirEml\Model\SmsNotificationSendMultipleRequest**](../Model/SmsNotificationSendMultipleRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsMultipleNotificationSentResponse**](../Model/SmsMultipleNotificationSentResponse.md)
+[**\AirEml\Model\SmsMultipleNotificationSentResponse**](../Model/SmsMultipleNotificationSentResponse.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 ## `sendSmsNotification()`
 
 ```php
-sendSmsNotification($sms_notification_send_request): \OpenAPI\Client\Model\SmsNotificationSentResponse
+sendSmsNotification($sms_notification_send_request): \AirEml\Model\SmsNotificationSentResponse
 ```
 
 Send SMS Notification
@@ -253,12 +253,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendingApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$sms_notification_send_request = new \OpenAPI\Client\Model\SmsNotificationSendRequest(); // \OpenAPI\Client\Model\SmsNotificationSendRequest
+$sms_notification_send_request = new \AirEml\Model\SmsNotificationSendRequest(); // \AirEml\Model\SmsNotificationSendRequest
 
 try {
     $result = $apiInstance->sendSmsNotification($sms_notification_send_request);
@@ -272,11 +272,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_notification_send_request** | [**\OpenAPI\Client\Model\SmsNotificationSendRequest**](../Model/SmsNotificationSendRequest.md)|  | |
+| **sms_notification_send_request** | [**\AirEml\Model\SmsNotificationSendRequest**](../Model/SmsNotificationSendRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsNotificationSentResponse**](../Model/SmsNotificationSentResponse.md)
+[**\AirEml\Model\SmsNotificationSentResponse**](../Model/SmsNotificationSentResponse.md)
 
 ### Authorization
 

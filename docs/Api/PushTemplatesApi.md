@@ -1,6 +1,6 @@
-# OpenAPI\Client\PushTemplatesApi
+# AirEml\PushTemplatesApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createPushTemplate()`
 
 ```php
-createPushTemplate($push_template_request): \OpenAPI\Client\Model\PushTemplateResponse
+createPushTemplate($push_template_request): \AirEml\Model\PushTemplateResponse
 ```
 
 Create a New Push Notification Template
@@ -34,12 +34,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$push_template_request = new \OpenAPI\Client\Model\PushTemplateRequest(); // \OpenAPI\Client\Model\PushTemplateRequest
+$push_template_request = new \AirEml\Model\PushTemplateRequest(); // \AirEml\Model\PushTemplateRequest
 
 try {
     $result = $apiInstance->createPushTemplate($push_template_request);
@@ -53,11 +53,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **push_template_request** | [**\OpenAPI\Client\Model\PushTemplateRequest**](../Model/PushTemplateRequest.md)|  | |
+| **push_template_request** | [**\AirEml\Model\PushTemplateRequest**](../Model/PushTemplateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
+[**\AirEml\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 ## `createPushTemplateContent()`
 
 ```php
-createPushTemplateContent($template_id, $template_content_locale, $push_template_content_request): \OpenAPI\Client\Model\PushTemplateContentResponse
+createPushTemplateContent($template_id, $template_content_locale, $push_template_content_request): \AirEml\Model\PushTemplateContentResponse
 ```
 
 Create a Content in the Push Notification Template
@@ -90,14 +90,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$push_template_content_request = new \OpenAPI\Client\Model\PushTemplateContentRequest(); // \OpenAPI\Client\Model\PushTemplateContentRequest
+$push_template_content_request = new \AirEml\Model\PushTemplateContentRequest(); // \AirEml\Model\PushTemplateContentRequest
 
 try {
     $result = $apiInstance->createPushTemplateContent($template_id, $template_content_locale, $push_template_content_request);
@@ -113,11 +113,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **push_template_content_request** | [**\OpenAPI\Client\Model\PushTemplateContentRequest**](../Model/PushTemplateContentRequest.md)|  | |
+| **push_template_content_request** | [**\AirEml\Model\PushTemplateContentRequest**](../Model/PushTemplateContentRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
+[**\AirEml\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -247,7 +247,7 @@ No authorization required
 ## `getPushTemplate()`
 
 ```php
-getPushTemplate($template_id): \OpenAPI\Client\Model\PushTemplateResponse
+getPushTemplate($template_id): \AirEml\Model\PushTemplateResponse
 ```
 
 Retrieve an Existing Push Notification Template
@@ -262,7 +262,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -285,7 +285,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
+[**\AirEml\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ No authorization required
 ## `getPushTemplateContent()`
 
 ```php
-getPushTemplateContent($template_id, $template_content_locale): \OpenAPI\Client\Model\PushTemplateContentResponse
+getPushTemplateContent($template_id, $template_content_locale): \AirEml\Model\PushTemplateContentResponse
 ```
 
 Retrieve an Existing Content from the Push Notification Template
@@ -318,7 +318,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -343,7 +343,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
+[**\AirEml\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
 
 ### Authorization
 
@@ -361,7 +361,7 @@ No authorization required
 ## `listPushTemplateContents()`
 
 ```php
-listPushTemplateContents($template_id, $cursor, $per_page, $order_by): \OpenAPI\Client\Model\PushTemplateContentCollectionResponse
+listPushTemplateContents($template_id, $cursor, $per_page, $order_by): \AirEml\Model\PushTemplateContentCollectionResponse
 ```
 
 List All Contents from the Push Notification Template
@@ -376,7 +376,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -405,7 +405,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateContentCollectionResponse**](../Model/PushTemplateContentCollectionResponse.md)
+[**\AirEml\Model\PushTemplateContentCollectionResponse**](../Model/PushTemplateContentCollectionResponse.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ No authorization required
 ## `listPushTemplates()`
 
 ```php
-listPushTemplates($cursor, $per_page, $order_by, $name, $status): \OpenAPI\Client\Model\PushTemplateCollectionResponse
+listPushTemplates($cursor, $per_page, $order_by, $name, $status): \AirEml\Model\PushTemplateCollectionResponse
 ```
 
 List All Push Notification Templates
@@ -438,7 +438,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -469,7 +469,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateCollectionResponse**](../Model/PushTemplateCollectionResponse.md)
+[**\AirEml\Model\PushTemplateCollectionResponse**](../Model/PushTemplateCollectionResponse.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ No authorization required
 ## `updatePushTemplate()`
 
 ```php
-updatePushTemplate($template_id, $push_template_update_request): \OpenAPI\Client\Model\PushTemplateResponse
+updatePushTemplate($template_id, $push_template_update_request): \AirEml\Model\PushTemplateResponse
 ```
 
 Update a Push Notification Template
@@ -502,13 +502,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
-$push_template_update_request = new \OpenAPI\Client\Model\PushTemplateUpdateRequest(); // \OpenAPI\Client\Model\PushTemplateUpdateRequest
+$push_template_update_request = new \AirEml\Model\PushTemplateUpdateRequest(); // \AirEml\Model\PushTemplateUpdateRequest
 
 try {
     $result = $apiInstance->updatePushTemplate($template_id, $push_template_update_request);
@@ -523,11 +523,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
-| **push_template_update_request** | [**\OpenAPI\Client\Model\PushTemplateUpdateRequest**](../Model/PushTemplateUpdateRequest.md)|  | |
+| **push_template_update_request** | [**\AirEml\Model\PushTemplateUpdateRequest**](../Model/PushTemplateUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
+[**\AirEml\Model\PushTemplateResponse**](../Model/PushTemplateResponse.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ No authorization required
 ## `updatePushTemplateContent()`
 
 ```php
-updatePushTemplateContent($template_id, $template_content_locale, $push_template_content_request): \OpenAPI\Client\Model\PushTemplateContentResponse
+updatePushTemplateContent($template_id, $template_content_locale, $push_template_content_request): \AirEml\Model\PushTemplateContentResponse
 ```
 
 Update a Content in the Push Notification Template
@@ -560,14 +560,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushTemplatesApi(
+$apiInstance = new AirEml\Api\PushTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$push_template_content_request = new \OpenAPI\Client\Model\PushTemplateContentRequest(); // \OpenAPI\Client\Model\PushTemplateContentRequest
+$push_template_content_request = new \AirEml\Model\PushTemplateContentRequest(); // \AirEml\Model\PushTemplateContentRequest
 
 try {
     $result = $apiInstance->updatePushTemplateContent($template_id, $template_content_locale, $push_template_content_request);
@@ -583,11 +583,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **push_template_content_request** | [**\OpenAPI\Client\Model\PushTemplateContentRequest**](../Model/PushTemplateContentRequest.md)|  | |
+| **push_template_content_request** | [**\AirEml\Model\PushTemplateContentRequest**](../Model/PushTemplateContentRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
+[**\AirEml\Model\PushTemplateContentResponse**](../Model/PushTemplateContentResponse.md)
 
 ### Authorization
 

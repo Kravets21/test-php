@@ -1,6 +1,6 @@
-# OpenAPI\Client\SMSSettingsApi
+# AirEml\SMSSettingsApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -28,7 +28,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createSmsChannel()`
 
 ```php
-createSmsChannel($sms_channel_request): \OpenAPI\Client\Model\SmsChannelResponse
+createSmsChannel($sms_channel_request): \AirEml\Model\SmsChannelResponse
 ```
 
 Create a New SMS Channel
@@ -43,12 +43,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$sms_channel_request = new \OpenAPI\Client\Model\SmsChannelRequest(); // \OpenAPI\Client\Model\SmsChannelRequest
+$sms_channel_request = new \AirEml\Model\SmsChannelRequest(); // \AirEml\Model\SmsChannelRequest
 
 try {
     $result = $apiInstance->createSmsChannel($sms_channel_request);
@@ -62,11 +62,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_channel_request** | [**\OpenAPI\Client\Model\SmsChannelRequest**](../Model/SmsChannelRequest.md)|  | |
+| **sms_channel_request** | [**\AirEml\Model\SmsChannelRequest**](../Model/SmsChannelRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
+[**\AirEml\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ No authorization required
 ## `createSmsTransport()`
 
 ```php
-createSmsTransport($sms_transport_create_request): \OpenAPI\Client\Model\SmsTransportResponse
+createSmsTransport($sms_transport_create_request): \AirEml\Model\SmsTransportResponse
 ```
 
 Create a New SMS Transport
@@ -99,12 +99,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$sms_transport_create_request = new \OpenAPI\Client\Model\SmsTransportCreateRequest(); // \OpenAPI\Client\Model\SmsTransportCreateRequest
+$sms_transport_create_request = new \AirEml\Model\SmsTransportCreateRequest(); // \AirEml\Model\SmsTransportCreateRequest
 
 try {
     $result = $apiInstance->createSmsTransport($sms_transport_create_request);
@@ -118,11 +118,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_transport_create_request** | [**\OpenAPI\Client\Model\SmsTransportCreateRequest**](../Model/SmsTransportCreateRequest.md)|  | |
+| **sms_transport_create_request** | [**\AirEml\Model\SmsTransportCreateRequest**](../Model/SmsTransportCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
+[**\AirEml\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -210,7 +210,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -267,7 +267,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -307,7 +307,7 @@ No authorization required
 ## `getSmsChannel()`
 
 ```php
-getSmsChannel($channel_id): \OpenAPI\Client\Model\SmsChannelResponse
+getSmsChannel($channel_id): \AirEml\Model\SmsChannelResponse
 ```
 
 Retrieve an Existing SMS Channel
@@ -322,7 +322,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -345,7 +345,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
+[**\AirEml\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ No authorization required
 ## `getSmsRoutingRule()`
 
 ```php
-getSmsRoutingRule($channel_id, $routing_rule_id): \OpenAPI\Client\Model\SmsRoutingRuleResponse
+getSmsRoutingRule($channel_id, $routing_rule_id): \AirEml\Model\SmsRoutingRuleResponse
 ```
 
 Retrieve an Existing SMS Channel Rule
@@ -378,7 +378,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -403,7 +403,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
+[**\AirEml\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ No authorization required
 ## `getSmsSender()`
 
 ```php
-getSmsSender($transport_id, $sender_id): \OpenAPI\Client\Model\SmsSenderResponse
+getSmsSender($transport_id, $sender_id): \AirEml\Model\SmsSenderResponse
 ```
 
 Retrieve an Existing Number from the SMS Transport
@@ -436,7 +436,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -461,7 +461,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsSenderResponse**](../Model/SmsSenderResponse.md)
+[**\AirEml\Model\SmsSenderResponse**](../Model/SmsSenderResponse.md)
 
 ### Authorization
 
@@ -479,7 +479,7 @@ No authorization required
 ## `getSmsTransport()`
 
 ```php
-getSmsTransport($transport_id): \OpenAPI\Client\Model\SmsTransportResponse
+getSmsTransport($transport_id): \AirEml\Model\SmsTransportResponse
 ```
 
 Retrieve an Existing SMS Transport
@@ -494,7 +494,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -517,7 +517,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
+[**\AirEml\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
 
 ### Authorization
 
@@ -535,7 +535,7 @@ No authorization required
 ## `getWebhookByTransport()`
 
 ```php
-getWebhookByTransport($transport_id): \OpenAPI\Client\Model\TransportWebhookGenerateResponse
+getWebhookByTransport($transport_id): \AirEml\Model\TransportWebhookGenerateResponse
 ```
 
 Webhook url generated by transport
@@ -550,7 +550,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -573,7 +573,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransportWebhookGenerateResponse**](../Model/TransportWebhookGenerateResponse.md)
+[**\AirEml\Model\TransportWebhookGenerateResponse**](../Model/TransportWebhookGenerateResponse.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ No authorization required
 ## `listAllSmsSenders()`
 
 ```php
-listAllSmsSenders($cursor, $per_page, $order_by, $status, $name, $sender_id): \OpenAPI\Client\Model\SmsSenderCollectionResponse
+listAllSmsSenders($cursor, $per_page, $order_by, $status, $name, $sender_id): \AirEml\Model\SmsSenderCollectionResponse
 ```
 
 List All SMS Transport Numbers
@@ -606,7 +606,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -639,7 +639,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsSenderCollectionResponse**](../Model/SmsSenderCollectionResponse.md)
+[**\AirEml\Model\SmsSenderCollectionResponse**](../Model/SmsSenderCollectionResponse.md)
 
 ### Authorization
 
@@ -657,7 +657,7 @@ No authorization required
 ## `listSmsChannels()`
 
 ```php
-listSmsChannels($cursor, $per_page, $order_by, $name): \OpenAPI\Client\Model\SmsChannelCollectionResponse
+listSmsChannels($cursor, $per_page, $order_by, $name): \AirEml\Model\SmsChannelCollectionResponse
 ```
 
 List All SMS Channels
@@ -672,7 +672,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -701,7 +701,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsChannelCollectionResponse**](../Model/SmsChannelCollectionResponse.md)
+[**\AirEml\Model\SmsChannelCollectionResponse**](../Model/SmsChannelCollectionResponse.md)
 
 ### Authorization
 
@@ -719,7 +719,7 @@ No authorization required
 ## `listSmsChannelsRules()`
 
 ```php
-listSmsChannelsRules($channel_id, $cursor, $per_page, $order_by, $sms_routing_rule_request): \OpenAPI\Client\Model\SmsRoutingRuleCollectionResponse
+listSmsChannelsRules($channel_id, $cursor, $per_page, $order_by, $sms_routing_rule_request): \AirEml\Model\SmsRoutingRuleCollectionResponse
 ```
 
 List of all Rules from the SMS Channel
@@ -734,7 +734,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -743,7 +743,7 @@ $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Ch
 $cursor = eyJjcmVhdGVkX2F0IjoiMjAyMy0wMS0xOCAxMjo1ODoyMyIsImlkIjoiYWRhM2NkMGItODE2YS0zMDc2LWEyOGUtNzYyMjNkNTRlNDMyIiwiX3BvaW50c1RvTmV4dEl0ZW1zIjpmYWxzZX0; // string | Which 'cursor' of paginated results to return.
 $per_page = 2; // int | Number of items returned per page
 $order_by = latest; // string | The field to order the results by
-$sms_routing_rule_request = new \OpenAPI\Client\Model\SmsRoutingRuleRequest(); // \OpenAPI\Client\Model\SmsRoutingRuleRequest
+$sms_routing_rule_request = new \AirEml\Model\SmsRoutingRuleRequest(); // \AirEml\Model\SmsRoutingRuleRequest
 
 try {
     $result = $apiInstance->listSmsChannelsRules($channel_id, $cursor, $per_page, $order_by, $sms_routing_rule_request);
@@ -761,11 +761,11 @@ try {
 | **cursor** | **string**| Which &#39;cursor&#39; of paginated results to return. | [optional] |
 | **per_page** | **int**| Number of items returned per page | [optional] [default to 20] |
 | **order_by** | **string**| The field to order the results by | [optional] |
-| **sms_routing_rule_request** | [**\OpenAPI\Client\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | [optional] |
+| **sms_routing_rule_request** | [**\AirEml\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsRoutingRuleCollectionResponse**](../Model/SmsRoutingRuleCollectionResponse.md)
+[**\AirEml\Model\SmsRoutingRuleCollectionResponse**](../Model/SmsRoutingRuleCollectionResponse.md)
 
 ### Authorization
 
@@ -783,7 +783,7 @@ No authorization required
 ## `listSmsSenders()`
 
 ```php
-listSmsSenders($transport_id, $cursor, $per_page, $order_by, $status, $name): \OpenAPI\Client\Model\SmsSenderCollectionResponse
+listSmsSenders($transport_id, $cursor, $per_page, $order_by, $status, $name): \AirEml\Model\SmsSenderCollectionResponse
 ```
 
 List All Numbers from the SMS Transport
@@ -798,7 +798,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -831,7 +831,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsSenderCollectionResponse**](../Model/SmsSenderCollectionResponse.md)
+[**\AirEml\Model\SmsSenderCollectionResponse**](../Model/SmsSenderCollectionResponse.md)
 
 ### Authorization
 
@@ -849,7 +849,7 @@ No authorization required
 ## `listSmsTransports()`
 
 ```php
-listSmsTransports($cursor, $per_page, $order_by, $type, $status): \OpenAPI\Client\Model\SmsTransportCollectionResponse
+listSmsTransports($cursor, $per_page, $order_by, $type, $status): \AirEml\Model\SmsTransportCollectionResponse
 ```
 
 List All SMS Transports
@@ -864,7 +864,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -895,7 +895,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTransportCollectionResponse**](../Model/SmsTransportCollectionResponse.md)
+[**\AirEml\Model\SmsTransportCollectionResponse**](../Model/SmsTransportCollectionResponse.md)
 
 ### Authorization
 
@@ -913,7 +913,7 @@ No authorization required
 ## `saveSmsRoutingRule()`
 
 ```php
-saveSmsRoutingRule($channel_id, $sms_routing_rule_request): \OpenAPI\Client\Model\SmsRoutingRuleResponse
+saveSmsRoutingRule($channel_id, $sms_routing_rule_request): \AirEml\Model\SmsRoutingRuleResponse
 ```
 
 Save a parameters SMS Channel Rule
@@ -928,13 +928,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel Rule
-$sms_routing_rule_request = new \OpenAPI\Client\Model\SmsRoutingRuleRequest(); // \OpenAPI\Client\Model\SmsRoutingRuleRequest
+$sms_routing_rule_request = new \AirEml\Model\SmsRoutingRuleRequest(); // \AirEml\Model\SmsRoutingRuleRequest
 
 try {
     $result = $apiInstance->saveSmsRoutingRule($channel_id, $sms_routing_rule_request);
@@ -949,11 +949,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel Rule | |
-| **sms_routing_rule_request** | [**\OpenAPI\Client\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | |
+| **sms_routing_rule_request** | [**\AirEml\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
+[**\AirEml\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -971,7 +971,7 @@ No authorization required
 ## `updateSmsChannel()`
 
 ```php
-updateSmsChannel($channel_id, $sms_channel_request): \OpenAPI\Client\Model\SmsChannelResponse
+updateSmsChannel($channel_id, $sms_channel_request): \AirEml\Model\SmsChannelResponse
 ```
 
 Update a SMS Channel
@@ -986,13 +986,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel
-$sms_channel_request = new \OpenAPI\Client\Model\SmsChannelRequest(); // \OpenAPI\Client\Model\SmsChannelRequest
+$sms_channel_request = new \AirEml\Model\SmsChannelRequest(); // \AirEml\Model\SmsChannelRequest
 
 try {
     $result = $apiInstance->updateSmsChannel($channel_id, $sms_channel_request);
@@ -1007,11 +1007,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel | |
-| **sms_channel_request** | [**\OpenAPI\Client\Model\SmsChannelRequest**](../Model/SmsChannelRequest.md)|  | |
+| **sms_channel_request** | [**\AirEml\Model\SmsChannelRequest**](../Model/SmsChannelRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
+[**\AirEml\Model\SmsChannelResponse**](../Model/SmsChannelResponse.md)
 
 ### Authorization
 
@@ -1029,7 +1029,7 @@ No authorization required
 ## `updateSmsRoutingRule()`
 
 ```php
-updateSmsRoutingRule($channel_id, $routing_rule_id, $sms_routing_rule_request): \OpenAPI\Client\Model\SmsRoutingRuleResponse
+updateSmsRoutingRule($channel_id, $routing_rule_id, $sms_routing_rule_request): \AirEml\Model\SmsRoutingRuleResponse
 ```
 
 Update a SMS Channel Rule
@@ -1044,14 +1044,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel Rule
 $routing_rule_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel Rule
-$sms_routing_rule_request = new \OpenAPI\Client\Model\SmsRoutingRuleRequest(); // \OpenAPI\Client\Model\SmsRoutingRuleRequest
+$sms_routing_rule_request = new \AirEml\Model\SmsRoutingRuleRequest(); // \AirEml\Model\SmsRoutingRuleRequest
 
 try {
     $result = $apiInstance->updateSmsRoutingRule($channel_id, $routing_rule_id, $sms_routing_rule_request);
@@ -1067,11 +1067,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel Rule | |
 | **routing_rule_id** | **string**| The ID of the Channel Rule | |
-| **sms_routing_rule_request** | [**\OpenAPI\Client\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | |
+| **sms_routing_rule_request** | [**\AirEml\Model\SmsRoutingRuleRequest**](../Model/SmsRoutingRuleRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
+[**\AirEml\Model\SmsRoutingRuleResponse**](../Model/SmsRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -1089,7 +1089,7 @@ No authorization required
 ## `updateSmsTransport()`
 
 ```php
-updateSmsTransport($transport_id, $sms_transport_update_request): \OpenAPI\Client\Model\SmsTransportResponse
+updateSmsTransport($transport_id, $sms_transport_update_request): \AirEml\Model\SmsTransportResponse
 ```
 
 Update a SMS Transport
@@ -1104,13 +1104,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSSettingsApi(
+$apiInstance = new AirEml\Api\SMSSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $transport_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Transport
-$sms_transport_update_request = new \OpenAPI\Client\Model\SmsTransportUpdateRequest(); // \OpenAPI\Client\Model\SmsTransportUpdateRequest
+$sms_transport_update_request = new \AirEml\Model\SmsTransportUpdateRequest(); // \AirEml\Model\SmsTransportUpdateRequest
 
 try {
     $result = $apiInstance->updateSmsTransport($transport_id, $sms_transport_update_request);
@@ -1125,11 +1125,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **transport_id** | **string**| The ID of the Transport | |
-| **sms_transport_update_request** | [**\OpenAPI\Client\Model\SmsTransportUpdateRequest**](../Model/SmsTransportUpdateRequest.md)|  | |
+| **sms_transport_update_request** | [**\AirEml\Model\SmsTransportUpdateRequest**](../Model/SmsTransportUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
+[**\AirEml\Model\SmsTransportResponse**](../Model/SmsTransportResponse.md)
 
 ### Authorization
 

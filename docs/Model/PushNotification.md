@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | The unique identifier of the Notification. | [optional]
-**locale** | [**\OpenAPI\Client\Model\LocaleCode**](LocaleCode.md) |  | [optional]
+**locale** | [**\AirEml\Model\LocaleCode**](LocaleCode.md) |  | [optional]
 **token** | **string** | The recipient token of the Notification. | [optional]
 **recipient_id** | **string** | The ID of recipient. | [optional]
 **status** | **int** | The state of the Notification status.  - 1: Notification Accepted  - 2: Notification Blocked  - 3: Notification Sent  - 4: Notification Not Sent  - 5: Notification Delivered  - 6: Notification Not Delivered | [optional]

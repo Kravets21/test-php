@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\OpenAPI\Client\Model\EmailTemplateContent**](EmailTemplateContent.md) |  | [optional]
+**data** | [**\AirEml\Model\EmailTemplateContent**](EmailTemplateContent.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

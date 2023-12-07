@@ -1,5 +1,6 @@
 {
-    "description": "airEml - API (full)",
+    "name": "pdffiller/eml-php-api",
+    "description": "airEml - API",
     "keywords": [
         "openapitools",
         "openapi-generator",
@@ -9,12 +10,12 @@
         "rest",
         "api"
     ],
-    "homepage": "https://openapi-generator.tech",
+    "homepage": "https://aireml.com",
     "license": "unlicense",
     "authors": [
         {
-            "name": "OpenAPI",
-            "homepage": "https://openapi-generator.tech"
+            "name": "AirEML",
+            "homepage": "https://aireml.com"
         }
     ],
     "require": {
@@ -30,9 +31,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "AirEml\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": { "AirEml\\Test\\" : "test/" }
     }
 }

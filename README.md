@@ -1,6 +1,6 @@
-# OpenAPIClient-php
+# AirEml
 
-airEml - API (full)
+airEml - API
 
 
 ## Installation & Usage
@@ -19,11 +19,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/pdffiller/eml-php-api.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "pdffiller/eml-php-api": "*@dev"
   }
 }
 ```
@@ -36,71 +36,118 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once('/path/to/AirEml/vendor/autoload.php');
 ```
 
-## Getting Started
+## Authorization
 
+Authentication schemes defined for the API:
+### oAuth2ClientCredentials
+
+- **Type**: `OAuth`
+- **Flow**: `application`
+
+- **Type**: HTTP Bearer token authentication
+
+You need to create your tokens by your client_id and client_secret
+
+Example:
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$config = AirEml\Configuration::getDefaultConfiguration()
+    ->setClientID('9ac87c6c-*******')
+    ->setClientSecret('qFJDFnUb*****');
+
+$authApi = new AirEml\Api\AuthorizationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+$authRequest = new \AirEml\Model\AuthTokenForServiceAccountRequest();
+$authRequest->setClientId($config->getClientID());
+$authRequest->setClientSecret($config->getClientSecret());
+
+try {
+    $response = $authApi->createAuthTokenForServiceAccount($authRequest);
+    // set token in config and it will add Auth Header with this token for every request
+    $config->setAccessToken($response->getData()->getAccessToken());
+} catch (\AirEml\ApiException $e) {
+    print_r($e->getMessage());
+}
+```
+
+
+## Getting Started
+Default host is https://aireml.com
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
-
-$apiInstance = new OpenAPI\Client\Api\AudienceApi(
+$apiInstance = new AirEml\Api\SendingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
-$audience_user_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the User
-$audience_contact_type = 1; // int | The type of the Contact
-$audience_user_contact_request = new \OpenAPI\Client\Model\AudienceUserContactRequest(); // \OpenAPI\Client\Model\AudienceUserContactRequest
+
+$template = new \AirEml\Model\SmsNotificationSendRequestTemplate();
+$template->setName("onboarding_start");
+$template->setLocale("en");
+
+$to = new \AirEml\Model\SmsNotificationSendRequestTo();
+$to->setNumber("+380****");
+
+$sendNotificationRequest = new \AirEml\Model\SmsNotificationSendRequest();
+$sendNotificationRequest->setTemplate($template);
+$sendNotificationRequest->setTo($to);
 
 try {
-    $apiInstance->attachAudienceUserContact($audience_user_id, $audience_contact_type, $audience_user_contact_request);
-} catch (Exception $e) {
-    echo 'Exception when calling AudienceApi->attachAudienceUserContact: ', $e->getMessage(), PHP_EOL;
+    $response = $apiInstance->sendSmsNotification($sendNotificationRequest);
+    print_r($response);
+} catch (\AirEml\ApiException $e) {
+    print_r($e->getMessage());
 }
-
 ```
 
 ## API Endpoints
 
-All URIs are relative to *http://localhost:8080*
+All URIs are relative to *https://aireml.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AudienceApi* | [**attachAudienceUserContact**](docs/Api/AudienceApi.md#attachaudienceusercontact) | **POST** /api/v1/audience/users/{audience_user_id}/contacts/{audience_contact_type} | Attach a Contact to the Audience User
-*AudienceApi* | [**attachAudienceUserTag**](docs/Api/AudienceApi.md#attachaudienceusertag) | **POST** /api/v1/audience/users/{audience_user_id}/tags/{audience_tag_name} | Attach a Tag to the Audience User
+*AudienceApi* | [**attachAudienceRecipientContact**](docs/Api/AudienceApi.md#attachaudiencerecipientcontact) | **POST** /api/v1/audience/recipients/{audience_recipient_id}/contacts/{audience_contact_type} | Attach a Contact to the Audience Recipient
+*AudienceApi* | [**attachAudienceRecipientTag**](docs/Api/AudienceApi.md#attachaudiencerecipienttag) | **POST** /api/v1/audience/recipients/{audience_recipient_id}/tags/{audience_tag_name} | Attach a Tag to the Audience Recipient
+*AudienceApi* | [**createAudienceRecipient**](docs/Api/AudienceApi.md#createaudiencerecipient) | **POST** /api/v1/audience/recipients | Create a New Recipient
 *AudienceApi* | [**createAudienceSegment**](docs/Api/AudienceApi.md#createaudiencesegment) | **POST** /api/v1/audience/segments | Create a New Segment
 *AudienceApi* | [**createAudienceSegmentFilter**](docs/Api/AudienceApi.md#createaudiencesegmentfilter) | **POST** /api/v1/audience/segments/{audience_segment_id}/filters | Create a New Segment Filter
 *AudienceApi* | [**createAudienceTag**](docs/Api/AudienceApi.md#createaudiencetag) | **POST** /api/v1/audience/tags | Create a New Tag
-*AudienceApi* | [**createAudienceUser**](docs/Api/AudienceApi.md#createaudienceuser) | **POST** /api/v1/audience/users | Create a New User
+*AudienceApi* | [**deleteAudienceRecipient**](docs/Api/AudienceApi.md#deleteaudiencerecipient) | **DELETE** /api/v1/audience/recipients/{audience_recipient_id} | Delete a Recipient
+*AudienceApi* | [**deleteAudienceRecipientContact**](docs/Api/AudienceApi.md#deleteaudiencerecipientcontact) | **DELETE** /api/v1/audience/recipients/{audience_recipient_id}/contacts/{audience_contact_type} | Delete a Contact from the Audience Recipient
+*AudienceApi* | [**deleteAudienceRecipientTag**](docs/Api/AudienceApi.md#deleteaudiencerecipienttag) | **DELETE** /api/v1/audience/recipients/{audience_recipient_id}/tags/{audience_tag_name} | Delete a Tag from the Audience Recipient
 *AudienceApi* | [**deleteAudienceSegment**](docs/Api/AudienceApi.md#deleteaudiencesegment) | **DELETE** /api/v1/audience/segments/{audience_segment_id} | Delete a Segment
 *AudienceApi* | [**deleteAudienceSegmentFilter**](docs/Api/AudienceApi.md#deleteaudiencesegmentfilter) | **DELETE** /api/v1/audience/segments/{audience_segment_id}/filters/{audience_filter_id} | Delete a Filter from the Audience Segment
 *AudienceApi* | [**deleteAudienceTag**](docs/Api/AudienceApi.md#deleteaudiencetag) | **DELETE** /api/v1/audience/tags/{audience_tag_id} | Delete a Tag
-*AudienceApi* | [**deleteAudienceUser**](docs/Api/AudienceApi.md#deleteaudienceuser) | **DELETE** /api/v1/audience/users/{audience_user_id} | Delete a User
-*AudienceApi* | [**deleteAudienceUserContact**](docs/Api/AudienceApi.md#deleteaudienceusercontact) | **DELETE** /api/v1/audience/users/{audience_user_id}/contacts/{audience_contact_type} | Delete a Contact from the Audience User
-*AudienceApi* | [**deleteAudienceUserTag**](docs/Api/AudienceApi.md#deleteaudienceusertag) | **DELETE** /api/v1/audience/users/{audience_user_id}/tags/{audience_tag_name} | Delete a Tag from the Audience User
+*AudienceApi* | [**getAudienceRecipient**](docs/Api/AudienceApi.md#getaudiencerecipient) | **GET** /api/v1/audience/recipients/{audience_recipient_id} | Retrieve an Existing Recipient
 *AudienceApi* | [**getAudienceSegment**](docs/Api/AudienceApi.md#getaudiencesegment) | **GET** /api/v1/audience/segments/{audience_segment_id} | Retrieve an Existing Segment
 *AudienceApi* | [**getAudienceSegmentFilter**](docs/Api/AudienceApi.md#getaudiencesegmentfilter) | **GET** /api/v1/audience/segments/{audience_segment_id}/filters/{audience_filter_id} | Retrieve an Existing Filter from the Audience Segment
 *AudienceApi* | [**getAudienceTag**](docs/Api/AudienceApi.md#getaudiencetag) | **GET** /api/v1/audience/tags/{audience_tag_id} | Retrieve an Existing Tag
-*AudienceApi* | [**getAudienceUser**](docs/Api/AudienceApi.md#getaudienceuser) | **GET** /api/v1/audience/users/{audience_user_id} | Retrieve an Existing User
+*AudienceApi* | [**listAudienceRecipientSegments**](docs/Api/AudienceApi.md#listaudiencerecipientsegments) | **GET** /api/v1/audience/recipients/{audience_recipient_id}/segments | List All Segments from the Recipient
+*AudienceApi* | [**listAudienceRecipients**](docs/Api/AudienceApi.md#listaudiencerecipients) | **GET** /api/v1/audience/recipients | List All Recipients
 *AudienceApi* | [**listAudienceSegmentFilters**](docs/Api/AudienceApi.md#listaudiencesegmentfilters) | **GET** /api/v1/audience/segments/{audience_segment_id}/filters | List All Filters from the Segment
 *AudienceApi* | [**listAudienceSegments**](docs/Api/AudienceApi.md#listaudiencesegments) | **GET** /api/v1/audience/segments | List All Segments
 *AudienceApi* | [**listAudienceTags**](docs/Api/AudienceApi.md#listaudiencetags) | **GET** /api/v1/audience/tags | List All Tags
-*AudienceApi* | [**listAudienceUserSegments**](docs/Api/AudienceApi.md#listaudienceusersegments) | **GET** /api/v1/audience/users/{audience_user_id}/segments | List All Segments from the User
-*AudienceApi* | [**listAudienceUsers**](docs/Api/AudienceApi.md#listaudienceusers) | **GET** /api/v1/audience/users | List All Users
-*AudienceApi* | [**postFilterCounts**](docs/Api/AudienceApi.md#postfiltercounts) | **POST** /api/v1/audience/filters/counts | Get Filter Counts
 *AudienceApi* | [**updateAssignActiveStatusToAudienceSegment**](docs/Api/AudienceApi.md#updateassignactivestatustoaudiencesegment) | **PUT** /api/v1/audience/segments/{audience_segment_id}/activate | Activate a Segment
 *AudienceApi* | [**updateAssignInactiveStatusToAudienceSegment**](docs/Api/AudienceApi.md#updateassigninactivestatustoaudiencesegment) | **PUT** /api/v1/audience/segments/{audience_segment_id}/deactivate | Deactivate a Segment
+*AudienceApi* | [**updateAudienceRecipient**](docs/Api/AudienceApi.md#updateaudiencerecipient) | **PUT** /api/v1/audience/recipients/{audience_recipient_id} | Update a Recipient
 *AudienceApi* | [**updateAudienceSegment**](docs/Api/AudienceApi.md#updateaudiencesegment) | **PUT** /api/v1/audience/segments/{audience_segment_id} | Update a Segment
 *AudienceApi* | [**updateAudienceSegmentFilter**](docs/Api/AudienceApi.md#updateaudiencesegmentfilter) | **PUT** /api/v1/audience/segments/{audience_segment_id}/filters/{audience_filter_id} | Update a Filter in the Audience Segment
 *AudienceApi* | [**updateAudienceTag**](docs/Api/AudienceApi.md#updateaudiencetag) | **PUT** /api/v1/audience/tags/{audience_tag_id} | Update a Tag
-*AudienceApi* | [**updateAudienceUser**](docs/Api/AudienceApi.md#updateaudienceuser) | **PUT** /api/v1/audience/users/{audience_user_id} | Update a User
 *AuthorizationApi* | [**createAuthTokenForServiceAccount**](docs/Api/AuthorizationApi.md#createauthtokenforserviceaccount) | **POST** /api/v1/auth/tokens/service-account | Create Access Token for Service Account
 *EmailSettingsApi* | [**createEmailChannel**](docs/Api/EmailSettingsApi.md#createemailchannel) | **POST** /api/v1/email/channels | Create a New Email Notification Channel
 *EmailSettingsApi* | [**createEmailChannelRoutingRule**](docs/Api/EmailSettingsApi.md#createemailchannelroutingrule) | **POST** /api/v1/email/channels/{channel_id}/routing-rules | Create a Routing-rule in the Email Notification Channel
@@ -201,9 +248,17 @@ Class | Method | HTTP request | Description
 
 - [AudienceFilter](docs/Model/AudienceFilter.md)
 - [AudienceFilterCollectionResponse](docs/Model/AudienceFilterCollectionResponse.md)
-- [AudienceFilterCountsRequest](docs/Model/AudienceFilterCountsRequest.md)
 - [AudienceFilterRequest](docs/Model/AudienceFilterRequest.md)
 - [AudienceFilterResponse](docs/Model/AudienceFilterResponse.md)
+- [AudienceRecipient](docs/Model/AudienceRecipient.md)
+- [AudienceRecipientCollectionResponse](docs/Model/AudienceRecipientCollectionResponse.md)
+- [AudienceRecipientContact](docs/Model/AudienceRecipientContact.md)
+- [AudienceRecipientContactRequest](docs/Model/AudienceRecipientContactRequest.md)
+- [AudienceRecipientRequest](docs/Model/AudienceRecipientRequest.md)
+- [AudienceRecipientResponse](docs/Model/AudienceRecipientResponse.md)
+- [AudienceRecipientSegment](docs/Model/AudienceRecipientSegment.md)
+- [AudienceRecipientSegmentCollectionResponse](docs/Model/AudienceRecipientSegmentCollectionResponse.md)
+- [AudienceRecipientTag](docs/Model/AudienceRecipientTag.md)
 - [AudienceRule](docs/Model/AudienceRule.md)
 - [AudienceRuleProperty](docs/Model/AudienceRuleProperty.md)
 - [AudienceSegment](docs/Model/AudienceSegment.md)
@@ -214,22 +269,12 @@ Class | Method | HTTP request | Description
 - [AudienceTagCollectionResponse](docs/Model/AudienceTagCollectionResponse.md)
 - [AudienceTagRequest](docs/Model/AudienceTagRequest.md)
 - [AudienceTagResponse](docs/Model/AudienceTagResponse.md)
-- [AudienceUser](docs/Model/AudienceUser.md)
-- [AudienceUserCollectionResponse](docs/Model/AudienceUserCollectionResponse.md)
-- [AudienceUserContact](docs/Model/AudienceUserContact.md)
-- [AudienceUserContactRequest](docs/Model/AudienceUserContactRequest.md)
-- [AudienceUserRequest](docs/Model/AudienceUserRequest.md)
-- [AudienceUserResponse](docs/Model/AudienceUserResponse.md)
-- [AudienceUserSegment](docs/Model/AudienceUserSegment.md)
-- [AudienceUserSegmentCollectionResponse](docs/Model/AudienceUserSegmentCollectionResponse.md)
-- [AudienceUserTag](docs/Model/AudienceUserTag.md)
 - [AuthToken](docs/Model/AuthToken.md)
 - [AuthTokenForServiceAccountRequest](docs/Model/AuthTokenForServiceAccountRequest.md)
 - [AuthTokenResponse](docs/Model/AuthTokenResponse.md)
 - [Collection](docs/Model/Collection.md)
 - [CollectionLinks](docs/Model/CollectionLinks.md)
 - [CollectionMeta](docs/Model/CollectionMeta.md)
-- [CountryCode](docs/Model/CountryCode.md)
 - [EmailChannel](docs/Model/EmailChannel.md)
 - [EmailChannelCollectionResponse](docs/Model/EmailChannelCollectionResponse.md)
 - [EmailChannelRequest](docs/Model/EmailChannelRequest.md)
@@ -284,8 +329,6 @@ Class | Method | HTTP request | Description
 - [Event](docs/Model/Event.md)
 - [EventResponse](docs/Model/EventResponse.md)
 - [LocaleCode](docs/Model/LocaleCode.md)
-- [PostFilterCounts200Response](docs/Model/PostFilterCounts200Response.md)
-- [PostFilterCounts200ResponseData](docs/Model/PostFilterCounts200ResponseData.md)
 - [PushNotification](docs/Model/PushNotification.md)
 - [PushNotificationCollectionResponse](docs/Model/PushNotificationCollectionResponse.md)
 - [PushNotificationResponse](docs/Model/PushNotificationResponse.md)
@@ -348,22 +391,6 @@ Class | Method | HTTP request | Description
 - [SubscriptionUpdateRequest](docs/Model/SubscriptionUpdateRequest.md)
 - [TransportWebhookGenerateResponse](docs/Model/TransportWebhookGenerateResponse.md)
 - [TransportWebhookGenerateResponseData](docs/Model/TransportWebhookGenerateResponseData.md)
-
-## Authorization
-Endpoints do not require authorization.
-
-## Tests
-
-To run the tests, use:
-
-```bash
-composer install
-vendor/bin/phpunit
-```
-
-## Author
-
-
 
 ## About this package
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sms** | **array** |  | [optional]
-**email** | **array** |  | [optional]
-**push** | **array** |  | [optional]
+**sms** | **string[]** |  | [optional]
+**email** | **string[]** |  | [optional]
+**push** | **string[]** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
