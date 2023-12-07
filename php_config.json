@@ -1,0 +1,10 @@
+{
+  "artifactUrl": "https://aireml.com",
+  "composerPackageName": "AirEml",
+  "developerOrganization": "AirEML",
+  "developerOrganizationUrl": "https://aireml.com",
+  "hideGenerationTimestamp": true,
+  "invokerPackage": "AirEml",
+  "packageName": "AirEml",
+  "variableNamingConvention": "CamesCase"
+}

@@ -1,0 +1,7 @@
+test/**
+.travis.yml
+git_push.sh
+phpunit.xml.dist
+.openapi-generator
+.open-generator-ignore
+.gitignore
