@@ -1,6 +1,6 @@
-# OpenAPI\Client\NotificationsApi
+# AirEml\NotificationsApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -18,7 +18,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `getEmailNotification()`
 
 ```php
-getEmailNotification($notification_id): \OpenAPI\Client\Model\EmailNotificationResponse
+getEmailNotification($notification_id): \AirEml\Model\EmailNotificationResponse
 ```
 
 Retrieve an Existing Email Notification
@@ -33,7 +33,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailNotificationResponse**](../Model/EmailNotificationResponse.md)
+[**\AirEml\Model\EmailNotificationResponse**](../Model/EmailNotificationResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 ## `getEmailNotificationStates()`
 
 ```php
-getEmailNotificationStates($notification_id): \OpenAPI\Client\Model\EmailNotificationStateResponse
+getEmailNotificationStates($notification_id): \AirEml\Model\EmailNotificationStateResponse
 ```
 
 Retrieve an Existing Email Notification States
@@ -89,7 +89,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailNotificationStateResponse**](../Model/EmailNotificationStateResponse.md)
+[**\AirEml\Model\EmailNotificationStateResponse**](../Model/EmailNotificationStateResponse.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 ## `getPushNotification()`
 
 ```php
-getPushNotification($notification_id): \OpenAPI\Client\Model\PushNotificationResponse
+getPushNotification($notification_id): \AirEml\Model\PushNotificationResponse
 ```
 
 Retrieve an Existing Push Notification
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -168,7 +168,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushNotificationResponse**](../Model/PushNotificationResponse.md)
+[**\AirEml\Model\PushNotificationResponse**](../Model/PushNotificationResponse.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ No authorization required
 ## `getPushNotificationStates()`
 
 ```php
-getPushNotificationStates($notification_id): \OpenAPI\Client\Model\PushNotificationStateResponse
+getPushNotificationStates($notification_id): \AirEml\Model\PushNotificationStateResponse
 ```
 
 Retrieve an Existing Push Notification States
@@ -201,7 +201,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -224,7 +224,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushNotificationStateResponse**](../Model/PushNotificationStateResponse.md)
+[**\AirEml\Model\PushNotificationStateResponse**](../Model/PushNotificationStateResponse.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 ## `getSmsNotification()`
 
 ```php
-getSmsNotification($notification_id): \OpenAPI\Client\Model\SmsNotificationResponse
+getSmsNotification($notification_id): \AirEml\Model\SmsNotificationResponse
 ```
 
 Retrieve an Existing SMS Notification
@@ -257,7 +257,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -280,7 +280,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsNotificationResponse**](../Model/SmsNotificationResponse.md)
+[**\AirEml\Model\SmsNotificationResponse**](../Model/SmsNotificationResponse.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 ## `getSmsNotificationStates()`
 
 ```php
-getSmsNotificationStates($notification_id): \OpenAPI\Client\Model\SmsNotificationStateResponse
+getSmsNotificationStates($notification_id): \AirEml\Model\SmsNotificationStateResponse
 ```
 
 Retrieve an Existing Sms Notification States
@@ -313,7 +313,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -336,7 +336,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsNotificationStateResponse**](../Model/SmsNotificationStateResponse.md)
+[**\AirEml\Model\SmsNotificationStateResponse**](../Model/SmsNotificationStateResponse.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ No authorization required
 ## `listEmailNotifications()`
 
 ```php
-listEmailNotifications($cursor, $per_page, $order_by, $to_email_address, $template_id, $template_name, $recipient_id): \OpenAPI\Client\Model\EmailNotificationCollectionResponse
+listEmailNotifications($cursor, $per_page, $order_by, $to_email_address, $template_id, $template_name, $recipient_id): \AirEml\Model\EmailNotificationCollectionResponse
 ```
 
 List All Email Notifications
@@ -369,7 +369,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -404,7 +404,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailNotificationCollectionResponse**](../Model/EmailNotificationCollectionResponse.md)
+[**\AirEml\Model\EmailNotificationCollectionResponse**](../Model/EmailNotificationCollectionResponse.md)
 
 ### Authorization
 
@@ -422,7 +422,7 @@ No authorization required
 ## `listPushNotifications()`
 
 ```php
-listPushNotifications($cursor, $per_page, $order_by, $recipient_id, $token, $template_id, $template_name): \OpenAPI\Client\Model\PushNotificationCollectionResponse
+listPushNotifications($cursor, $per_page, $order_by, $recipient_id, $token, $template_id, $template_name): \AirEml\Model\PushNotificationCollectionResponse
 ```
 
 List All Push Notifications
@@ -437,7 +437,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -472,7 +472,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushNotificationCollectionResponse**](../Model/PushNotificationCollectionResponse.md)
+[**\AirEml\Model\PushNotificationCollectionResponse**](../Model/PushNotificationCollectionResponse.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ No authorization required
 ## `listSmsNotifications()`
 
 ```php
-listSmsNotifications($cursor, $per_page, $order_by, $template_name, $template_id, $from_number, $to_number, $recipient_id): \OpenAPI\Client\Model\SmsNotificationCollectionResponse
+listSmsNotifications($cursor, $per_page, $order_by, $template_name, $template_id, $from_number, $to_number, $recipient_id): \AirEml\Model\SmsNotificationCollectionResponse
 ```
 
 List All SMS Notifications
@@ -505,7 +505,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NotificationsApi(
+$apiInstance = new AirEml\Api\NotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -542,7 +542,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsNotificationCollectionResponse**](../Model/SmsNotificationCollectionResponse.md)
+[**\AirEml\Model\SmsNotificationCollectionResponse**](../Model/SmsNotificationCollectionResponse.md)
 
 ### Authorization
 

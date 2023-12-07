@@ -1,6 +1,6 @@
-# OpenAPI\Client\WebhooksApi
+# AirEml\WebhooksApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createWebhookSubscription()`
 
 ```php
-createWebhookSubscription($subscription_create_request): \OpenAPI\Client\Model\SubscriptionResponse
+createWebhookSubscription($subscription_create_request): \AirEml\Model\SubscriptionResponse
 ```
 
 Create a New Subscription
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$subscription_create_request = new \OpenAPI\Client\Model\SubscriptionCreateRequest(); // \OpenAPI\Client\Model\SubscriptionCreateRequest
+$subscription_create_request = new \AirEml\Model\SubscriptionCreateRequest(); // \AirEml\Model\SubscriptionCreateRequest
 
 try {
     $result = $apiInstance->createWebhookSubscription($subscription_create_request);
@@ -49,11 +49,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **subscription_create_request** | [**\OpenAPI\Client\Model\SubscriptionCreateRequest**](../Model/SubscriptionCreateRequest.md)|  | |
+| **subscription_create_request** | [**\AirEml\Model\SubscriptionCreateRequest**](../Model/SubscriptionCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\AirEml\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -126,7 +126,7 @@ No authorization required
 ## `getWebhookSubscription()`
 
 ```php
-getWebhookSubscription($webhook_subscription_id): \OpenAPI\Client\Model\SubscriptionResponse
+getWebhookSubscription($webhook_subscription_id): \AirEml\Model\SubscriptionResponse
 ```
 
 Retrieve an Existing webhook subscription
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -164,7 +164,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\AirEml\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ No authorization required
 ## `listWebhookEvents()`
 
 ```php
-listWebhookEvents(): \OpenAPI\Client\Model\EventResponse
+listWebhookEvents(): \AirEml\Model\EventResponse
 ```
 
 List All Webhook events
@@ -197,7 +197,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -217,7 +217,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EventResponse**](../Model/EventResponse.md)
+[**\AirEml\Model\EventResponse**](../Model/EventResponse.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ No authorization required
 ## `listWebhookSubscriptions()`
 
 ```php
-listWebhookSubscriptions($cursor, $per_page, $order_by, $search, $status): \OpenAPI\Client\Model\SubscriptionCollectionResponse
+listWebhookSubscriptions($cursor, $per_page, $order_by, $search, $status): \AirEml\Model\SubscriptionCollectionResponse
 ```
 
 List All webhook Subscriptions
@@ -250,7 +250,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -281,7 +281,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SubscriptionCollectionResponse**](../Model/SubscriptionCollectionResponse.md)
+[**\AirEml\Model\SubscriptionCollectionResponse**](../Model/SubscriptionCollectionResponse.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ No authorization required
 ## `updateWebhookSubscription()`
 
 ```php
-updateWebhookSubscription($webhook_subscription_id, $subscription_update_request): \OpenAPI\Client\Model\SubscriptionResponse
+updateWebhookSubscription($webhook_subscription_id, $subscription_update_request): \AirEml\Model\SubscriptionResponse
 ```
 
 Update a webhook subscription
@@ -314,13 +314,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new AirEml\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $webhook_subscription_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the webhook subscription
-$subscription_update_request = new \OpenAPI\Client\Model\SubscriptionUpdateRequest(); // \OpenAPI\Client\Model\SubscriptionUpdateRequest
+$subscription_update_request = new \AirEml\Model\SubscriptionUpdateRequest(); // \AirEml\Model\SubscriptionUpdateRequest
 
 try {
     $result = $apiInstance->updateWebhookSubscription($webhook_subscription_id, $subscription_update_request);
@@ -335,11 +335,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **webhook_subscription_id** | **string**| The ID of the webhook subscription | |
-| **subscription_update_request** | [**\OpenAPI\Client\Model\SubscriptionUpdateRequest**](../Model/SubscriptionUpdateRequest.md)|  | |
+| **subscription_update_request** | [**\AirEml\Model\SubscriptionUpdateRequest**](../Model/SubscriptionUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\AirEml\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 

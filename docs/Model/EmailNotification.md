@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | The unique identifier of the Notification. | [optional]
-**locale** | [**\OpenAPI\Client\Model\LocaleCode**](LocaleCode.md) |  | [optional]
+**locale** | [**\AirEml\Model\LocaleCode**](LocaleCode.md) |  | [optional]
 **recipient_id** | **string** | The ID of recipient. | [optional]
 **to_name** | **string** | The name of the recipient. | [optional]
 **to_email_address** | **string** | The email address of the recipient. | [optional]

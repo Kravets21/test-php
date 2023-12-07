@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property** | [**\OpenAPI\Client\Model\AudienceRuleProperty**](AudienceRuleProperty.md) |  | [optional]
+**property** | [**\AirEml\Model\AudienceRuleProperty**](AudienceRuleProperty.md) |  | [optional]
 **operator** | **string** | The operator of the filter. | [optional]
 **value** | **string** | The value of the filter. | [optional]
 

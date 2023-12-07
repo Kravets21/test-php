@@ -1,6 +1,6 @@
-# OpenAPI\Client\PushSettingsApi
+# AirEml\PushSettingsApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createPushPlatform()`
 
 ```php
-createPushPlatform($push_platform_request): \OpenAPI\Client\Model\PushPlatformResponse
+createPushPlatform($push_platform_request): \AirEml\Model\PushPlatformResponse
 ```
 
 Create a New Push Notification Platform
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushSettingsApi(
+$apiInstance = new AirEml\Api\PushSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$push_platform_request = new \OpenAPI\Client\Model\PushPlatformRequest(); // \OpenAPI\Client\Model\PushPlatformRequest
+$push_platform_request = new \AirEml\Model\PushPlatformRequest(); // \AirEml\Model\PushPlatformRequest
 
 try {
     $result = $apiInstance->createPushPlatform($push_platform_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **push_platform_request** | [**\OpenAPI\Client\Model\PushPlatformRequest**](../Model/PushPlatformRequest.md)|  | |
+| **push_platform_request** | [**\AirEml\Model\PushPlatformRequest**](../Model/PushPlatformRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
+[**\AirEml\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushSettingsApi(
+$apiInstance = new AirEml\Api\PushSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -125,7 +125,7 @@ No authorization required
 ## `getPushPlatform()`
 
 ```php
-getPushPlatform($platform_id): \OpenAPI\Client\Model\PushPlatformResponse
+getPushPlatform($platform_id): \AirEml\Model\PushPlatformResponse
 ```
 
 Retrieve an Existing Push Notification Platform
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushSettingsApi(
+$apiInstance = new AirEml\Api\PushSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -163,7 +163,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
+[**\AirEml\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `listPushPlatforms()`
 
 ```php
-listPushPlatforms($cursor, $per_page, $order_by, $status): \OpenAPI\Client\Model\PushPlatformCollectionResponse
+listPushPlatforms($cursor, $per_page, $order_by, $status): \AirEml\Model\PushPlatformCollectionResponse
 ```
 
 List All Push Notification Platforms
@@ -196,7 +196,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushSettingsApi(
+$apiInstance = new AirEml\Api\PushSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushPlatformCollectionResponse**](../Model/PushPlatformCollectionResponse.md)
+[**\AirEml\Model\PushPlatformCollectionResponse**](../Model/PushPlatformCollectionResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 ## `updatePushPlatform()`
 
 ```php
-updatePushPlatform($platform_id, $push_platform_request): \OpenAPI\Client\Model\PushPlatformResponse
+updatePushPlatform($platform_id, $push_platform_request): \AirEml\Model\PushPlatformResponse
 ```
 
 Update a Push Notification Platform
@@ -258,13 +258,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PushSettingsApi(
+$apiInstance = new AirEml\Api\PushSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $platform_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Platform
-$push_platform_request = new \OpenAPI\Client\Model\PushPlatformRequest(); // \OpenAPI\Client\Model\PushPlatformRequest
+$push_platform_request = new \AirEml\Model\PushPlatformRequest(); // \AirEml\Model\PushPlatformRequest
 
 try {
     $result = $apiInstance->updatePushPlatform($platform_id, $push_platform_request);
@@ -279,11 +279,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **platform_id** | **string**| The ID of the Platform | |
-| **push_platform_request** | [**\OpenAPI\Client\Model\PushPlatformRequest**](../Model/PushPlatformRequest.md)|  | |
+| **push_platform_request** | [**\AirEml\Model\PushPlatformRequest**](../Model/PushPlatformRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
+[**\AirEml\Model\PushPlatformResponse**](../Model/PushPlatformResponse.md)
 
 ### Authorization
 

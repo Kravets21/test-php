@@ -1,6 +1,6 @@
-# OpenAPI\Client\SMSTemplatesApi
+# AirEml\SMSTemplatesApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createSmsTemplate()`
 
 ```php
-createSmsTemplate($sms_template_request): \OpenAPI\Client\Model\SmsTemplateResponse
+createSmsTemplate($sms_template_request): \AirEml\Model\SmsTemplateResponse
 ```
 
 Create a New SMS Template
@@ -34,12 +34,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$sms_template_request = new \OpenAPI\Client\Model\SmsTemplateRequest(); // \OpenAPI\Client\Model\SmsTemplateRequest
+$sms_template_request = new \AirEml\Model\SmsTemplateRequest(); // \AirEml\Model\SmsTemplateRequest
 
 try {
     $result = $apiInstance->createSmsTemplate($sms_template_request);
@@ -53,11 +53,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_template_request** | [**\OpenAPI\Client\Model\SmsTemplateRequest**](../Model/SmsTemplateRequest.md)|  | |
+| **sms_template_request** | [**\AirEml\Model\SmsTemplateRequest**](../Model/SmsTemplateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
+[**\AirEml\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -187,7 +187,7 @@ No authorization required
 ## `getSmsTemplate()`
 
 ```php
-getSmsTemplate($template_id): \OpenAPI\Client\Model\SmsTemplateResponse
+getSmsTemplate($template_id): \AirEml\Model\SmsTemplateResponse
 ```
 
 Retrieve an Existing SMS Template
@@ -202,7 +202,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
+[**\AirEml\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 ## `getSmsTemplateContent()`
 
 ```php
-getSmsTemplateContent($template_id, $template_content_locale): \OpenAPI\Client\Model\SmsTemplateContentResponse
+getSmsTemplateContent($template_id, $template_content_locale): \AirEml\Model\SmsTemplateContentResponse
 ```
 
 Retrieve an Existing Content from the SMS Template
@@ -258,7 +258,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -283,7 +283,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
+[**\AirEml\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ No authorization required
 ## `listSmsTemplateContents()`
 
 ```php
-listSmsTemplateContents($template_id, $cursor, $per_page, $order_by): \OpenAPI\Client\Model\SmsTemplateContentCollectionResponse
+listSmsTemplateContents($template_id, $cursor, $per_page, $order_by): \AirEml\Model\SmsTemplateContentCollectionResponse
 ```
 
 List All Contents from the SMS Template
@@ -316,7 +316,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -345,7 +345,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateContentCollectionResponse**](../Model/SmsTemplateContentCollectionResponse.md)
+[**\AirEml\Model\SmsTemplateContentCollectionResponse**](../Model/SmsTemplateContentCollectionResponse.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ No authorization required
 ## `listSmsTemplates()`
 
 ```php
-listSmsTemplates($cursor, $per_page, $order_by, $name, $status): \OpenAPI\Client\Model\SmsTemplateCollectionResponse
+listSmsTemplates($cursor, $per_page, $order_by, $name, $status): \AirEml\Model\SmsTemplateCollectionResponse
 ```
 
 List All SMS Templates
@@ -378,7 +378,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -409,7 +409,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateCollectionResponse**](../Model/SmsTemplateCollectionResponse.md)
+[**\AirEml\Model\SmsTemplateCollectionResponse**](../Model/SmsTemplateCollectionResponse.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ No authorization required
 ## `saveSmsTemplateContent()`
 
 ```php
-saveSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request): \OpenAPI\Client\Model\SmsTemplateContentResponse
+saveSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request): \AirEml\Model\SmsTemplateContentResponse
 ```
 
 Save a Content in the SMS Template
@@ -442,14 +442,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$sms_template_content_request = new \OpenAPI\Client\Model\SmsTemplateContentRequest(); // \OpenAPI\Client\Model\SmsTemplateContentRequest
+$sms_template_content_request = new \AirEml\Model\SmsTemplateContentRequest(); // \AirEml\Model\SmsTemplateContentRequest
 
 try {
     $result = $apiInstance->saveSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request);
@@ -465,11 +465,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **sms_template_content_request** | [**\OpenAPI\Client\Model\SmsTemplateContentRequest**](../Model/SmsTemplateContentRequest.md)|  | |
+| **sms_template_content_request** | [**\AirEml\Model\SmsTemplateContentRequest**](../Model/SmsTemplateContentRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
+[**\AirEml\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ No authorization required
 ## `updateSmsTemplate()`
 
 ```php
-updateSmsTemplate($template_id, $sms_template_request): \OpenAPI\Client\Model\SmsTemplateResponse
+updateSmsTemplate($template_id, $sms_template_request): \AirEml\Model\SmsTemplateResponse
 ```
 
 Update a SMS Template
@@ -502,13 +502,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
-$sms_template_request = new \OpenAPI\Client\Model\SmsTemplateRequest(); // \OpenAPI\Client\Model\SmsTemplateRequest
+$sms_template_request = new \AirEml\Model\SmsTemplateRequest(); // \AirEml\Model\SmsTemplateRequest
 
 try {
     $result = $apiInstance->updateSmsTemplate($template_id, $sms_template_request);
@@ -523,11 +523,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
-| **sms_template_request** | [**\OpenAPI\Client\Model\SmsTemplateRequest**](../Model/SmsTemplateRequest.md)|  | |
+| **sms_template_request** | [**\AirEml\Model\SmsTemplateRequest**](../Model/SmsTemplateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
+[**\AirEml\Model\SmsTemplateResponse**](../Model/SmsTemplateResponse.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ No authorization required
 ## `updateSmsTemplateContent()`
 
 ```php
-updateSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request): \OpenAPI\Client\Model\SmsTemplateContentResponse
+updateSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request): \AirEml\Model\SmsTemplateContentResponse
 ```
 
 Update a Content in the SMS Notification Template
@@ -560,14 +560,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SMSTemplatesApi(
+$apiInstance = new AirEml\Api\SMSTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$sms_template_content_request = new \OpenAPI\Client\Model\SmsTemplateContentRequest(); // \OpenAPI\Client\Model\SmsTemplateContentRequest
+$sms_template_content_request = new \AirEml\Model\SmsTemplateContentRequest(); // \AirEml\Model\SmsTemplateContentRequest
 
 try {
     $result = $apiInstance->updateSmsTemplateContent($template_id, $template_content_locale, $sms_template_content_request);
@@ -583,11 +583,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **sms_template_content_request** | [**\OpenAPI\Client\Model\SmsTemplateContentRequest**](../Model/SmsTemplateContentRequest.md)|  | |
+| **sms_template_content_request** | [**\AirEml\Model\SmsTemplateContentRequest**](../Model/SmsTemplateContentRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
+[**\AirEml\Model\SmsTemplateContentResponse**](../Model/SmsTemplateContentResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
-# OpenAPI\Client\AuthorizationApi
+# AirEml\AuthorizationApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createAuthTokenForServiceAccount()`
 
 ```php
-createAuthTokenForServiceAccount($auth_token_for_service_account_request): \OpenAPI\Client\Model\AuthTokenResponse
+createAuthTokenForServiceAccount($auth_token_for_service_account_request): \AirEml\Model\AuthTokenResponse
 ```
 
 Create Access Token for Service Account
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthorizationApi(
+$apiInstance = new AirEml\Api\AuthorizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$auth_token_for_service_account_request = new \OpenAPI\Client\Model\AuthTokenForServiceAccountRequest(); // \OpenAPI\Client\Model\AuthTokenForServiceAccountRequest
+$auth_token_for_service_account_request = new \AirEml\Model\AuthTokenForServiceAccountRequest(); // \AirEml\Model\AuthTokenForServiceAccountRequest
 
 try {
     $result = $apiInstance->createAuthTokenForServiceAccount($auth_token_for_service_account_request);
@@ -44,11 +44,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **auth_token_for_service_account_request** | [**\OpenAPI\Client\Model\AuthTokenForServiceAccountRequest**](../Model/AuthTokenForServiceAccountRequest.md)|  | |
+| **auth_token_for_service_account_request** | [**\AirEml\Model\AuthTokenForServiceAccountRequest**](../Model/AuthTokenForServiceAccountRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthTokenResponse**](../Model/AuthTokenResponse.md)
+[**\AirEml\Model\AuthTokenResponse**](../Model/AuthTokenResponse.md)
 
 ### Authorization
 

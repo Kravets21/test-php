@@ -1,6 +1,6 @@
-# OpenAPI\Client\EmailSettingsApi
+# AirEml\EmailSettingsApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -29,7 +29,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createEmailChannel()`
 
 ```php
-createEmailChannel($email_channel_request): \OpenAPI\Client\Model\EmailChannelResponse
+createEmailChannel($email_channel_request): \AirEml\Model\EmailChannelResponse
 ```
 
 Create a New Email Notification Channel
@@ -44,12 +44,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_channel_request = new \OpenAPI\Client\Model\EmailChannelRequest(); // \OpenAPI\Client\Model\EmailChannelRequest
+$email_channel_request = new \AirEml\Model\EmailChannelRequest(); // \AirEml\Model\EmailChannelRequest
 
 try {
     $result = $apiInstance->createEmailChannel($email_channel_request);
@@ -63,11 +63,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_channel_request** | [**\OpenAPI\Client\Model\EmailChannelRequest**](../Model/EmailChannelRequest.md)|  | |
+| **email_channel_request** | [**\AirEml\Model\EmailChannelRequest**](../Model/EmailChannelRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
+[**\AirEml\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ No authorization required
 ## `createEmailChannelRoutingRule()`
 
 ```php
-createEmailChannelRoutingRule($channel_id, $email_routing_rule_create_request): \OpenAPI\Client\Model\EmailChannelRoutingRuleResponse
+createEmailChannelRoutingRule($channel_id, $email_routing_rule_create_request): \AirEml\Model\EmailChannelRoutingRuleResponse
 ```
 
 Create a Routing-rule in the Email Notification Channel
@@ -100,13 +100,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel
-$email_routing_rule_create_request = new \OpenAPI\Client\Model\EmailRoutingRuleCreateRequest(); // \OpenAPI\Client\Model\EmailRoutingRuleCreateRequest
+$email_routing_rule_create_request = new \AirEml\Model\EmailRoutingRuleCreateRequest(); // \AirEml\Model\EmailRoutingRuleCreateRequest
 
 try {
     $result = $apiInstance->createEmailChannelRoutingRule($channel_id, $email_routing_rule_create_request);
@@ -121,11 +121,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel | |
-| **email_routing_rule_create_request** | [**\OpenAPI\Client\Model\EmailRoutingRuleCreateRequest**](../Model/EmailRoutingRuleCreateRequest.md)|  | |
+| **email_routing_rule_create_request** | [**\AirEml\Model\EmailRoutingRuleCreateRequest**](../Model/EmailRoutingRuleCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
+[**\AirEml\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ No authorization required
 ## `createEmailSender()`
 
 ```php
-createEmailSender($email_sender_create_request): \OpenAPI\Client\Model\EmailSenderResponse
+createEmailSender($email_sender_create_request): \AirEml\Model\EmailSenderResponse
 ```
 
 Create a New Email Notification Sender
@@ -158,12 +158,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_sender_create_request = new \OpenAPI\Client\Model\EmailSenderCreateRequest(); // \OpenAPI\Client\Model\EmailSenderCreateRequest
+$email_sender_create_request = new \AirEml\Model\EmailSenderCreateRequest(); // \AirEml\Model\EmailSenderCreateRequest
 
 try {
     $result = $apiInstance->createEmailSender($email_sender_create_request);
@@ -177,11 +177,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_sender_create_request** | [**\OpenAPI\Client\Model\EmailSenderCreateRequest**](../Model/EmailSenderCreateRequest.md)|  | |
+| **email_sender_create_request** | [**\AirEml\Model\EmailSenderCreateRequest**](../Model/EmailSenderCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
+[**\AirEml\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ No authorization required
 ## `createEmailTransport()`
 
 ```php
-createEmailTransport($email_transport_create_request): \OpenAPI\Client\Model\EmailTransportResponse
+createEmailTransport($email_transport_create_request): \AirEml\Model\EmailTransportResponse
 ```
 
 Create a New Email Notification Transport
@@ -214,12 +214,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_transport_create_request = new \OpenAPI\Client\Model\EmailTransportCreateRequest(); // \OpenAPI\Client\Model\EmailTransportCreateRequest
+$email_transport_create_request = new \AirEml\Model\EmailTransportCreateRequest(); // \AirEml\Model\EmailTransportCreateRequest
 
 try {
     $result = $apiInstance->createEmailTransport($email_transport_create_request);
@@ -233,11 +233,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_transport_create_request** | [**\OpenAPI\Client\Model\EmailTransportCreateRequest**](../Model/EmailTransportCreateRequest.md)|  | |
+| **email_transport_create_request** | [**\AirEml\Model\EmailTransportCreateRequest**](../Model/EmailTransportCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
+[**\AirEml\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -325,7 +325,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -382,7 +382,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -437,7 +437,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -477,7 +477,7 @@ No authorization required
 ## `getEmailChannel()`
 
 ```php
-getEmailChannel($channel_id): \OpenAPI\Client\Model\EmailChannelResponse
+getEmailChannel($channel_id): \AirEml\Model\EmailChannelResponse
 ```
 
 Retrieve an Existing Email Notification Channel
@@ -492,7 +492,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -515,7 +515,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
+[**\AirEml\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
 
 ### Authorization
 
@@ -533,7 +533,7 @@ No authorization required
 ## `getEmailChannelRoutingRule()`
 
 ```php
-getEmailChannelRoutingRule($channel_id, $routing_rule_id): \OpenAPI\Client\Model\EmailChannelRoutingRuleResponse
+getEmailChannelRoutingRule($channel_id, $routing_rule_id): \AirEml\Model\EmailChannelRoutingRuleResponse
 ```
 
 Retrieve an Existing Routing-rule from the Email Notification Channel
@@ -548,7 +548,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -573,7 +573,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
+[**\AirEml\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ No authorization required
 ## `getEmailSender()`
 
 ```php
-getEmailSender($sender_id): \OpenAPI\Client\Model\EmailSenderResponse
+getEmailSender($sender_id): \AirEml\Model\EmailSenderResponse
 ```
 
 Retrieve an Existing Email Notification Sender
@@ -606,7 +606,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -629,7 +629,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
+[**\AirEml\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
 
 ### Authorization
 
@@ -647,7 +647,7 @@ No authorization required
 ## `getEmailTransport()`
 
 ```php
-getEmailTransport($transport_id): \OpenAPI\Client\Model\EmailTransportResponse
+getEmailTransport($transport_id): \AirEml\Model\EmailTransportResponse
 ```
 
 Retrieve an Existing Email Notification Transport
@@ -662,7 +662,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -685,7 +685,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
+[**\AirEml\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
 
 ### Authorization
 
@@ -703,7 +703,7 @@ No authorization required
 ## `listEmailChannelRoutingRules()`
 
 ```php
-listEmailChannelRoutingRules($channel_id, $cursor, $per_page, $order_by): \OpenAPI\Client\Model\EmailChannelRoutingRulesCollectionResponse
+listEmailChannelRoutingRules($channel_id, $cursor, $per_page, $order_by): \AirEml\Model\EmailChannelRoutingRulesCollectionResponse
 ```
 
 List All Routing-rules from the Email Notification Channel
@@ -718,7 +718,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -747,7 +747,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelRoutingRulesCollectionResponse**](../Model/EmailChannelRoutingRulesCollectionResponse.md)
+[**\AirEml\Model\EmailChannelRoutingRulesCollectionResponse**](../Model/EmailChannelRoutingRulesCollectionResponse.md)
 
 ### Authorization
 
@@ -765,7 +765,7 @@ No authorization required
 ## `listEmailChannels()`
 
 ```php
-listEmailChannels($cursor, $per_page, $order_by, $name): \OpenAPI\Client\Model\EmailChannelCollectionResponse
+listEmailChannels($cursor, $per_page, $order_by, $name): \AirEml\Model\EmailChannelCollectionResponse
 ```
 
 List All Email Notification Channels
@@ -780,7 +780,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -809,7 +809,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelCollectionResponse**](../Model/EmailChannelCollectionResponse.md)
+[**\AirEml\Model\EmailChannelCollectionResponse**](../Model/EmailChannelCollectionResponse.md)
 
 ### Authorization
 
@@ -827,7 +827,7 @@ No authorization required
 ## `listEmailSenders()`
 
 ```php
-listEmailSenders($cursor, $per_page, $order_by, $name): \OpenAPI\Client\Model\EmailSenderCollectionResponse
+listEmailSenders($cursor, $per_page, $order_by, $name): \AirEml\Model\EmailSenderCollectionResponse
 ```
 
 List All Email Notification Senders
@@ -842,7 +842,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -871,7 +871,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSenderCollectionResponse**](../Model/EmailSenderCollectionResponse.md)
+[**\AirEml\Model\EmailSenderCollectionResponse**](../Model/EmailSenderCollectionResponse.md)
 
 ### Authorization
 
@@ -889,7 +889,7 @@ No authorization required
 ## `listEmailTransports()`
 
 ```php
-listEmailTransports($cursor, $per_page, $order_by, $name, $status): \OpenAPI\Client\Model\EmailTransportCollectionResponse
+listEmailTransports($cursor, $per_page, $order_by, $name, $status): \AirEml\Model\EmailTransportCollectionResponse
 ```
 
 List All Email Notification Transports
@@ -904,7 +904,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -935,7 +935,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTransportCollectionResponse**](../Model/EmailTransportCollectionResponse.md)
+[**\AirEml\Model\EmailTransportCollectionResponse**](../Model/EmailTransportCollectionResponse.md)
 
 ### Authorization
 
@@ -953,7 +953,7 @@ No authorization required
 ## `updateEmailChannel()`
 
 ```php
-updateEmailChannel($channel_id, $email_channel_request): \OpenAPI\Client\Model\EmailChannelResponse
+updateEmailChannel($channel_id, $email_channel_request): \AirEml\Model\EmailChannelResponse
 ```
 
 Update a Email Notification Channel
@@ -968,13 +968,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel
-$email_channel_request = new \OpenAPI\Client\Model\EmailChannelRequest(); // \OpenAPI\Client\Model\EmailChannelRequest
+$email_channel_request = new \AirEml\Model\EmailChannelRequest(); // \AirEml\Model\EmailChannelRequest
 
 try {
     $result = $apiInstance->updateEmailChannel($channel_id, $email_channel_request);
@@ -989,11 +989,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel | |
-| **email_channel_request** | [**\OpenAPI\Client\Model\EmailChannelRequest**](../Model/EmailChannelRequest.md)|  | |
+| **email_channel_request** | [**\AirEml\Model\EmailChannelRequest**](../Model/EmailChannelRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
+[**\AirEml\Model\EmailChannelResponse**](../Model/EmailChannelResponse.md)
 
 ### Authorization
 
@@ -1011,7 +1011,7 @@ No authorization required
 ## `updateEmailChannelRoutingRule()`
 
 ```php
-updateEmailChannelRoutingRule($channel_id, $routing_rule_id, $email_routing_rule_update_request): \OpenAPI\Client\Model\EmailChannelRoutingRuleResponse
+updateEmailChannelRoutingRule($channel_id, $routing_rule_id, $email_routing_rule_update_request): \AirEml\Model\EmailChannelRoutingRuleResponse
 ```
 
 Update a Routing-rule in the Email Notification Channel
@@ -1026,14 +1026,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $channel_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Channel
 $routing_rule_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Routing-rule
-$email_routing_rule_update_request = new \OpenAPI\Client\Model\EmailRoutingRuleUpdateRequest(); // \OpenAPI\Client\Model\EmailRoutingRuleUpdateRequest
+$email_routing_rule_update_request = new \AirEml\Model\EmailRoutingRuleUpdateRequest(); // \AirEml\Model\EmailRoutingRuleUpdateRequest
 
 try {
     $result = $apiInstance->updateEmailChannelRoutingRule($channel_id, $routing_rule_id, $email_routing_rule_update_request);
@@ -1049,11 +1049,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **channel_id** | **string**| The ID of the Channel | |
 | **routing_rule_id** | **string**| The ID of the Routing-rule | |
-| **email_routing_rule_update_request** | [**\OpenAPI\Client\Model\EmailRoutingRuleUpdateRequest**](../Model/EmailRoutingRuleUpdateRequest.md)|  | |
+| **email_routing_rule_update_request** | [**\AirEml\Model\EmailRoutingRuleUpdateRequest**](../Model/EmailRoutingRuleUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
+[**\AirEml\Model\EmailChannelRoutingRuleResponse**](../Model/EmailChannelRoutingRuleResponse.md)
 
 ### Authorization
 
@@ -1071,7 +1071,7 @@ No authorization required
 ## `updateEmailSender()`
 
 ```php
-updateEmailSender($sender_id, $email_sender_update_request): \OpenAPI\Client\Model\EmailSenderResponse
+updateEmailSender($sender_id, $email_sender_update_request): \AirEml\Model\EmailSenderResponse
 ```
 
 Update a Email Notification Sender
@@ -1086,13 +1086,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $sender_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Sender
-$email_sender_update_request = new \OpenAPI\Client\Model\EmailSenderUpdateRequest(); // \OpenAPI\Client\Model\EmailSenderUpdateRequest
+$email_sender_update_request = new \AirEml\Model\EmailSenderUpdateRequest(); // \AirEml\Model\EmailSenderUpdateRequest
 
 try {
     $result = $apiInstance->updateEmailSender($sender_id, $email_sender_update_request);
@@ -1107,11 +1107,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sender_id** | **string**| The ID of the Sender | |
-| **email_sender_update_request** | [**\OpenAPI\Client\Model\EmailSenderUpdateRequest**](../Model/EmailSenderUpdateRequest.md)|  | |
+| **email_sender_update_request** | [**\AirEml\Model\EmailSenderUpdateRequest**](../Model/EmailSenderUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
+[**\AirEml\Model\EmailSenderResponse**](../Model/EmailSenderResponse.md)
 
 ### Authorization
 
@@ -1129,7 +1129,7 @@ No authorization required
 ## `updateEmailTransport()`
 
 ```php
-updateEmailTransport($transport_id, $email_transport_update_request): \OpenAPI\Client\Model\EmailTransportResponse
+updateEmailTransport($transport_id, $email_transport_update_request): \AirEml\Model\EmailTransportResponse
 ```
 
 Update a Email Notification Transport
@@ -1144,13 +1144,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSettingsApi(
+$apiInstance = new AirEml\Api\EmailSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $transport_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Transport
-$email_transport_update_request = new \OpenAPI\Client\Model\EmailTransportUpdateRequest(); // \OpenAPI\Client\Model\EmailTransportUpdateRequest
+$email_transport_update_request = new \AirEml\Model\EmailTransportUpdateRequest(); // \AirEml\Model\EmailTransportUpdateRequest
 
 try {
     $result = $apiInstance->updateEmailTransport($transport_id, $email_transport_update_request);
@@ -1165,11 +1165,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **transport_id** | **string**| The ID of the Transport | |
-| **email_transport_update_request** | [**\OpenAPI\Client\Model\EmailTransportUpdateRequest**](../Model/EmailTransportUpdateRequest.md)|  | |
+| **email_transport_update_request** | [**\AirEml\Model\EmailTransportUpdateRequest**](../Model/EmailTransportUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
+[**\AirEml\Model\EmailTransportResponse**](../Model/EmailTransportResponse.md)
 
 ### Authorization
 

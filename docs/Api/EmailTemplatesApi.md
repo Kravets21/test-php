@@ -1,6 +1,6 @@
-# OpenAPI\Client\EmailTemplatesApi
+# AirEml\EmailTemplatesApi
 
-All URIs are relative to http://localhost:8080, except if the operation defines another base path.
+All URIs are relative to https://aireml.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -19,7 +19,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createEmailTemplate()`
 
 ```php
-createEmailTemplate($email_template_create_request): \OpenAPI\Client\Model\EmailTemplateResponse
+createEmailTemplate($email_template_create_request): \AirEml\Model\EmailTemplateResponse
 ```
 
 Create a New Email Notification Template
@@ -34,12 +34,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_template_create_request = new \OpenAPI\Client\Model\EmailTemplateCreateRequest(); // \OpenAPI\Client\Model\EmailTemplateCreateRequest
+$email_template_create_request = new \AirEml\Model\EmailTemplateCreateRequest(); // \AirEml\Model\EmailTemplateCreateRequest
 
 try {
     $result = $apiInstance->createEmailTemplate($email_template_create_request);
@@ -53,11 +53,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_template_create_request** | [**\OpenAPI\Client\Model\EmailTemplateCreateRequest**](../Model/EmailTemplateCreateRequest.md)|  | |
+| **email_template_create_request** | [**\AirEml\Model\EmailTemplateCreateRequest**](../Model/EmailTemplateCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
+[**\AirEml\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 ## `createEmailTemplateContent()`
 
 ```php
-createEmailTemplateContent($template_id, $template_content_locale, $email_template_content_create_request): \OpenAPI\Client\Model\EmailTemplateContentResponse
+createEmailTemplateContent($template_id, $template_content_locale, $email_template_content_create_request): \AirEml\Model\EmailTemplateContentResponse
 ```
 
 Create a Content in the Email Notification Template
@@ -90,14 +90,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$email_template_content_create_request = new \OpenAPI\Client\Model\EmailTemplateContentCreateRequest(); // \OpenAPI\Client\Model\EmailTemplateContentCreateRequest
+$email_template_content_create_request = new \AirEml\Model\EmailTemplateContentCreateRequest(); // \AirEml\Model\EmailTemplateContentCreateRequest
 
 try {
     $result = $apiInstance->createEmailTemplateContent($template_id, $template_content_locale, $email_template_content_create_request);
@@ -113,11 +113,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **email_template_content_create_request** | [**\OpenAPI\Client\Model\EmailTemplateContentCreateRequest**](../Model/EmailTemplateContentCreateRequest.md)|  | |
+| **email_template_content_create_request** | [**\AirEml\Model\EmailTemplateContentCreateRequest**](../Model/EmailTemplateContentCreateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
+[**\AirEml\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -247,7 +247,7 @@ No authorization required
 ## `getEmailTemplate()`
 
 ```php
-getEmailTemplate($template_id): \OpenAPI\Client\Model\EmailTemplateResponse
+getEmailTemplate($template_id): \AirEml\Model\EmailTemplateResponse
 ```
 
 Retrieve an Existing Email Notification Template
@@ -262,7 +262,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -285,7 +285,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
+[**\AirEml\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ No authorization required
 ## `getEmailTemplateContent()`
 
 ```php
-getEmailTemplateContent($template_id, $template_content_locale): \OpenAPI\Client\Model\EmailTemplateContentResponse
+getEmailTemplateContent($template_id, $template_content_locale): \AirEml\Model\EmailTemplateContentResponse
 ```
 
 Retrieve an Existing Content from the Email Notification Template
@@ -318,7 +318,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -343,7 +343,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
+[**\AirEml\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
 
 ### Authorization
 
@@ -361,7 +361,7 @@ No authorization required
 ## `listEmailTemplateContents()`
 
 ```php
-listEmailTemplateContents($template_id, $cursor, $per_page, $order_by): \OpenAPI\Client\Model\EmailTemplateContentCollectionResponse
+listEmailTemplateContents($template_id, $cursor, $per_page, $order_by): \AirEml\Model\EmailTemplateContentCollectionResponse
 ```
 
 List All Contents from the Email Notification Template
@@ -376,7 +376,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -405,7 +405,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateContentCollectionResponse**](../Model/EmailTemplateContentCollectionResponse.md)
+[**\AirEml\Model\EmailTemplateContentCollectionResponse**](../Model/EmailTemplateContentCollectionResponse.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ No authorization required
 ## `listEmailTemplates()`
 
 ```php
-listEmailTemplates($cursor, $per_page, $order_by, $name, $status): \OpenAPI\Client\Model\EmailTemplateCollectionResponse
+listEmailTemplates($cursor, $per_page, $order_by, $name, $status): \AirEml\Model\EmailTemplateCollectionResponse
 ```
 
 List All Email Notification Templates
@@ -438,7 +438,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -469,7 +469,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateCollectionResponse**](../Model/EmailTemplateCollectionResponse.md)
+[**\AirEml\Model\EmailTemplateCollectionResponse**](../Model/EmailTemplateCollectionResponse.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ No authorization required
 ## `updateEmailTemplate()`
 
 ```php
-updateEmailTemplate($template_id, $email_template_update_request): \OpenAPI\Client\Model\EmailTemplateResponse
+updateEmailTemplate($template_id, $email_template_update_request): \AirEml\Model\EmailTemplateResponse
 ```
 
 Update a Email Notification Template
@@ -502,13 +502,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
-$email_template_update_request = new \OpenAPI\Client\Model\EmailTemplateUpdateRequest(); // \OpenAPI\Client\Model\EmailTemplateUpdateRequest
+$email_template_update_request = new \AirEml\Model\EmailTemplateUpdateRequest(); // \AirEml\Model\EmailTemplateUpdateRequest
 
 try {
     $result = $apiInstance->updateEmailTemplate($template_id, $email_template_update_request);
@@ -523,11 +523,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
-| **email_template_update_request** | [**\OpenAPI\Client\Model\EmailTemplateUpdateRequest**](../Model/EmailTemplateUpdateRequest.md)|  | |
+| **email_template_update_request** | [**\AirEml\Model\EmailTemplateUpdateRequest**](../Model/EmailTemplateUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
+[**\AirEml\Model\EmailTemplateResponse**](../Model/EmailTemplateResponse.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ No authorization required
 ## `updateEmailTemplateContent()`
 
 ```php
-updateEmailTemplateContent($template_id, $template_content_locale, $email_template_content_update_request): \OpenAPI\Client\Model\EmailTemplateContentResponse
+updateEmailTemplateContent($template_id, $template_content_locale, $email_template_content_update_request): \AirEml\Model\EmailTemplateContentResponse
 ```
 
 Update a Content in the Email Notification Template
@@ -560,14 +560,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailTemplatesApi(
+$apiInstance = new AirEml\Api\EmailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $template_id = 00112233-4455-6677-8899-aabbccddeeff; // string | The ID of the Template
 $template_content_locale = en; // LocaleCode | The locale of the Template Content
-$email_template_content_update_request = new \OpenAPI\Client\Model\EmailTemplateContentUpdateRequest(); // \OpenAPI\Client\Model\EmailTemplateContentUpdateRequest
+$email_template_content_update_request = new \AirEml\Model\EmailTemplateContentUpdateRequest(); // \AirEml\Model\EmailTemplateContentUpdateRequest
 
 try {
     $result = $apiInstance->updateEmailTemplateContent($template_id, $template_content_locale, $email_template_content_update_request);
@@ -583,11 +583,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **template_id** | **string**| The ID of the Template | |
 | **template_content_locale** | [**LocaleCode**](../Model/.md)| The locale of the Template Content | |
-| **email_template_content_update_request** | [**\OpenAPI\Client\Model\EmailTemplateContentUpdateRequest**](../Model/EmailTemplateContentUpdateRequest.md)|  | |
+| **email_template_content_update_request** | [**\AirEml\Model\EmailTemplateContentUpdateRequest**](../Model/EmailTemplateContentUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
+[**\AirEml\Model\EmailTemplateContentResponse**](../Model/EmailTemplateContentResponse.md)
 
 ### Authorization
 
