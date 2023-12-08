@@ -324,7 +324,7 @@ class CollectionLinks implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first
      *
-     * @param string|null $first The URI to the first page of the results.
+     * @param string|null $first The URI to the first page of the results.d
      *
      * @return self
      */
@@ -358,7 +358,7 @@ class CollectionLinks implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last
      *
-     * @param string|null $last The URI to the last page of the results.
+     * @param string|null $last The URI to the last page of the results.sd
      *
      * @return self
      */
@@ -392,7 +392,7 @@ class CollectionLinks implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets prev
      *
-     * @param string|null $prev The URI to the previous page of the results.
+     * @param string|null $prev The URI to the previous page of the results. a
      *
      * @return self
      */
