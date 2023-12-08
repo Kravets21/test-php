@@ -189,10 +189,7 @@ Class | Method | HTTP request | Description
 *NotificationsApi* | [**listPushNotifications**](docs/Api/NotificationsApi.md#listpushnotifications) | **GET** /api/v1/push/notifications | List All Push Notifications
 *NotificationsApi* | [**listSmsNotifications**](docs/Api/NotificationsApi.md#listsmsnotifications) | **GET** /api/v1/sms/notifications | List All SMS Notifications
 *PushSettingsApi* | [**createPushPlatform**](docs/Api/PushSettingsApi.md#createpushplatform) | **POST** /api/v1/push/platforms | Create a New Push Notification Platform
-*PushSettingsApi* | [**deletePushPlatforms**](docs/Api/PushSettingsApi.md#deletepushplatforms) | **DELETE** /api/v1/push/platforms/{platform_id} | Delete a Push Notification Platform
-*PushSettingsApi* | [**getPushPlatform**](docs/Api/PushSettingsApi.md#getpushplatform) | **GET** /api/v1/push/platforms/{platform_id} | Retrieve an Existing Push Notification Platform
 *PushSettingsApi* | [**listPushPlatforms**](docs/Api/PushSettingsApi.md#listpushplatforms) | **GET** /api/v1/push/platforms | List All Push Notification Platforms
-*PushSettingsApi* | [**updatePushPlatform**](docs/Api/PushSettingsApi.md#updatepushplatform) | **PUT** /api/v1/push/platforms/{platform_id} | Update a Push Notification Platform
 *PushTemplatesApi* | [**createPushTemplate**](docs/Api/PushTemplatesApi.md#createpushtemplate) | **POST** /api/v1/push/templates | Create a New Push Notification Template
 *PushTemplatesApi* | [**createPushTemplateContent**](docs/Api/PushTemplatesApi.md#createpushtemplatecontent) | **POST** /api/v1/push/templates/{template_id}/contents/{template_content_locale} | Create a Content in the Push Notification Template
 *PushTemplatesApi* | [**deletePushTemplate**](docs/Api/PushTemplatesApi.md#deletepushtemplate) | **DELETE** /api/v1/push/templates/{template_id} | Delete a Push Notification Template
